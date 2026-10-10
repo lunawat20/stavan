@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+const isCustomDomain = process.env.CUSTOM_DOMAIN === "true";
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  basePath: isGithubActions && !isCustomDomain ? "/stavan" : "",
+  trailingSlash: true,
   turbopack: {
     rules: {
       "*.css": {
