@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Dark brutalist canvas -->
+  <rect width="64" height="64" rx="8" fill="#090909" />
+  
+  <!-- Outer offset shadow mark -->
+  <rect x="18" y="18" width="32" height="32" fill="#FF4B2B" />
+  <rect x="14" y="14" width="32" height="32" fill="#FAF7EE" stroke="#111111" stroke-width="3" />
+  
+  <!-- Geometric Core Node Symbol -->
+  <rect x="22" y="22" width="8" height="8" fill="#111111" />
+  <rect x="30" y="30" width="8" height="8" fill="#20C8E8" />
+  <path d="M26 30V34H30" stroke="#111111" stroke-width="2.5" stroke-linecap="square" />
+  <circle cx="34" cy="26" r="3" fill="#B7FF2A" />
+</svg>
