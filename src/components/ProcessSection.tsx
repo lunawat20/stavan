@@ -59,7 +59,7 @@ export function ProcessSection() {
   return (
     <section
       id="how-it-works"
-      className="relative py-28 sm:py-36 bg-canvas-ivory text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-sky bg-grid-sky text-[#111111] border-b border-[#B8D3E8] overflow-hidden"
     >
       {/* Large Subtle Square / Grid Structure Behind Steps */}
       <GeometricCanvas variant="process" />
@@ -68,7 +68,7 @@ export function ProcessSection() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#B8D3E8] rounded-full text-xs font-mono tracking-widest text-[#426E92] mb-5 shadow-sm">
               <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
               <span>HOW IT WORKS</span>
             </div>

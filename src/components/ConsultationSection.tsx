@@ -20,13 +20,13 @@ export function ConsultationSection() {
   return (
     <section
       id="consultation"
-      className="relative py-28 sm:py-36 bg-canvas-ivory text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-sand bg-grid-warm text-[#111111] border-b border-[#E2DDD3] overflow-hidden"
     >
       {/* Large Geometric Background Elements */}
       <GeometricCanvas variant="consultation" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative rounded-3xl bg-[#FFFFFF] border border-[#D8D5CE] p-8 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(17,17,17,0.05)] overflow-hidden">
+        <div className="relative rounded-3xl bg-[#FFFFFF] border-2 border-[#E8CBB5] p-8 sm:p-12 lg:p-16 shadow-[0_24px_60px_-10px_rgba(200,120,60,0.08)] overflow-hidden">
           {/* Subtle top indicator bar in coral orange */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#FF5A36]" />
 

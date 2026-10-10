@@ -6,7 +6,7 @@ import { GeometricCanvas } from "./GeometricCanvas";
 
 export function FinalCTA() {
   return (
-    <section className="relative py-28 sm:py-36 bg-canvas-ivory bg-blueprint-grid text-[#111111] border-b border-[#D8D5CE] overflow-hidden">
+    <section className="relative py-28 sm:py-36 bg-canvas-sand bg-grid-warm text-[#111111] border-b border-[#E2DDD3] overflow-hidden">
       {/* Large Geometric Background Elements */}
       <GeometricCanvas variant="hero" />
 

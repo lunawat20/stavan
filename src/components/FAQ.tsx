@@ -54,14 +54,14 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 sm:py-36 bg-canvas-white bg-blueprint-grid text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-stone bg-drafting-dots text-[#111111] border-b border-[#CBC8BE] overflow-hidden"
     >
       <GeometricCanvas variant="faq" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F5F3EE] border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#CBC8BE] rounded-full text-xs font-mono tracking-widest text-[#6B6960] mb-5 shadow-sm">
             <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>FAQ</span>
           </div>

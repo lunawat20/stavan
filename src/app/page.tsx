@@ -14,38 +14,38 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-canvas-ivory text-[#111111]">
-      {/* 1. Header: Clean Warm Ivory Navigation */}
+    <main className="relative min-h-screen bg-canvas-sand text-[#111111]">
+      {/* 1. Header: Clean Warm Sand Navigation */}
       <Navbar />
 
-      {/* 2. Hero: Warm Ivory Canvas + Large Cropped Geometric Squares + Floating Automation Engine */}
+      {/* 2. Hero: Warm Sand & Apricot Canvas + Sunrise Glow + Floating Automation Engine */}
       <Hero />
 
-      {/* 3. Problem: Soft Cream Canvas + Outlined Geometric Squares + Asymmetric Stack */}
+      {/* 3. Problem: Warm Clay Canvas + Oatmeal Drafting Panels + Asymmetric Diagnostic Stack */}
       <ProblemSection />
 
-      {/* 4. What We Build: White Blueprint Grid Canvas + Asymmetric Bento Capabilities */}
+      {/* 4. What We Build: Fresh Sage Mint Canvas + Mint Architecture Geometry + Bento Capabilities */}
       <ServicesGrid />
 
-      {/* 5. How It Works: Warm Ivory Canvas + Large Geometric Structure + Elevated Active Card */}
+      {/* 5. How It Works: Blueprint Ice-Blue Canvas + Technical Coordinate Grid + Stepper */}
       <ProcessSection />
 
-      {/* 6. Automation Examples: Soft Cream Canvas + White Interactive Simulation Card */}
+      {/* 6. Automation Examples: Warm Champagne Butter Canvas + Interactive Simulation Card */}
       <AutomationExamples />
 
-      {/* 7. Why Stavan: White Architectural Grid Canvas + Studio Principles */}
+      {/* 7. Why Stavan: Editorial Lilac Slate Canvas + Studio Principles */}
       <WhyStavan />
 
-      {/* 8. Complimentary Consultation: Warm Ivory Canvas + High-Impact White Studio Card */}
+      {/* 8. Complimentary Consultation: Warm Apricot Dawn Canvas + High-Impact White Studio Card */}
       <ConsultationSection />
 
-      {/* 9. FAQ: White Blueprint Grid Canvas + Architectural Physical Accordions */}
+      {/* 9. FAQ: Warm Stone Chalk Canvas + Drafting Dot Matrix + Physical Accordions */}
       <FAQ />
 
-      {/* 10. Final CTA: Warm Ivory Canvas + Large Geometric Accent + Orange Conversion */}
+      {/* 10. Final CTA: Golden Sand Studio Canvas + Orange Conversion */}
       <FinalCTA />
 
-      {/* 11. Studio Footer: Soft Cream Canvas */}
+      {/* 11. Studio Footer: Warm Clay Canvas */}
       <Footer />
 
       {/* 12. Floating WhatsApp White Studio Pill */}

@@ -85,14 +85,14 @@ export function AutomationExamples() {
   return (
     <section
       id="automation-examples"
-      className="relative py-28 sm:py-36 bg-canvas-cream text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-champagne bg-grid-warm text-[#111111] border-b border-[#DFCEA2] overflow-hidden"
     >
-      <GeometricCanvas variant="minimal" />
+      <GeometricCanvas variant="examples" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#DFCEA2] rounded-full text-xs font-mono tracking-widest text-[#786433] mb-5 shadow-sm">
             <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>IMAGINE THE POSSIBILITY</span>
           </div>

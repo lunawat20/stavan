@@ -49,14 +49,14 @@ export function WhyStavan() {
   return (
     <section
       id="why-stavan"
-      className="relative py-28 sm:py-36 bg-canvas-white bg-blueprint-grid text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-lilac bg-drafting-hatch text-[#111111] border-b border-[#CAC0DE] overflow-hidden"
     >
-      <GeometricCanvas variant="problem" />
+      <GeometricCanvas variant="whystavan" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F5F3EE] border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#CAC0DE] rounded-full text-xs font-mono tracking-widest text-[#695886] mb-5 shadow-sm">
             <span className="w-1.5 h-1.5 bg-[#FF4D96]" />
             <span>WHY STAVAN</span>
           </div>

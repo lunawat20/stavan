@@ -7,7 +7,7 @@ import { ArrowUpRight, ArrowDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92vh] pt-32 sm:pt-36 pb-20 bg-canvas-ivory bg-blueprint-grid text-[#111111] flex flex-col justify-center overflow-hidden border-b border-[#D8D5CE]">
+    <section className="relative min-h-[92vh] pt-32 sm:pt-36 pb-20 bg-canvas-sand bg-grid-warm text-[#111111] flex flex-col justify-center overflow-hidden border-b border-[#E2DDD3]">
       {/* Large Architectural Geometric Canvas in Background */}
       <GeometricCanvas variant="hero" />
 

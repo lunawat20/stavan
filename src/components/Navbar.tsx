@@ -29,8 +29,8 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#D8D5CE] shadow-[0_2px_12px_rgba(17,17,17,0.03)]"
-            : "py-4 sm:py-5 bg-[#F5F3EE]/80 backdrop-blur-sm border-b border-[#E8E5DC]"
+            ? "py-3 bg-[#FBF3EA]/95 backdrop-blur-md border-b border-[#E2DDD3] shadow-[0_2px_12px_rgba(17,17,17,0.03)]"
+            : "py-4 sm:py-5 bg-[#FBF3EA]/80 backdrop-blur-sm border-b border-[#ECE5DB]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +102,7 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden bg-[#F5F3EE]/98 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-8">
+        <div className="fixed inset-0 z-40 md:hidden bg-[#FBF3EA]/98 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-8">
           <div className="flex flex-col space-y-3">
             <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#777777] pb-2 border-b border-[#D8D5CE]">
               INDEX // NAVIGATION

@@ -49,7 +49,7 @@ export function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative py-28 sm:py-36 bg-canvas-cream text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-clay bg-drafting-hatch text-[#111111] border-b border-[#DDD2C4] overflow-hidden"
     >
       {/* Large Geometric Background Elements */}
       <GeometricCanvas variant="problem" />
