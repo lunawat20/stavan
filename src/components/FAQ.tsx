@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { GeometricCanvas } from "./GeometricCanvas";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -53,13 +54,15 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 sm:py-36 bg-ivory-primary bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
+      className="relative py-28 sm:py-36 bg-canvas-white bg-blueprint-grid text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <GeometricCanvas variant="faq" />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F5F3EE] border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>FAQ</span>
           </div>
 
@@ -75,7 +78,7 @@ export function FAQ() {
           </p>
         </div>
 
-        {/* Accordion Stack on Warm Ivory Canvas */}
+        {/* Accordion Stack on White Blueprint Canvas */}
         <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -83,7 +86,7 @@ export function FAQ() {
             return (
               <div
                 key={idx}
-                className="card-studio-light rounded-2xl overflow-hidden transition-all"
+                className="card-studio rounded-2xl overflow-hidden transition-all"
               >
                 <button
                   type="button"
@@ -101,8 +104,8 @@ export function FAQ() {
                   <div
                     className={`w-7 h-7 flex-shrink-0 rounded-lg flex items-center justify-center border transition-colors ${
                       isOpen
-                        ? "bg-[#111111] border-[#111111] text-[#F7F4EC]"
-                        : "bg-[#F7F4EC] border-[#D8D5CC] text-[#555555]"
+                        ? "bg-[#FF5A36] border-[#FF5A36] text-white"
+                        : "bg-[#F5F3EE] border-[#D8D5CE] text-[#555555]"
                     }`}
                   >
                     {isOpen ? (
@@ -124,7 +127,7 @@ export function FAQ() {
         </div>
 
         {/* Direct WhatsApp Strip */}
-        <div className="mt-12 p-6 rounded-2xl bg-white border border-[#D8D5CC] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_16px_rgba(17,17,17,0.02)]">
+        <div className="mt-12 p-6 rounded-2xl bg-[#FAF8F4] border border-[#D8D5CE] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_16px_rgba(17,17,17,0.02)]">
           <div className="text-xs sm:text-sm font-mono text-[#555555]">
             Have a question specific to your software stack or industry?
           </div>
@@ -132,7 +135,7 @@ export function FAQ() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-[#111111] hover:text-[#FF542F] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-[#111111] hover:text-[#FF5A36] transition-colors"
           >
             <span>Ask Stavan directly on WhatsApp</span>
             <span>→</span>

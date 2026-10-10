@@ -11,16 +11,16 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 15);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: "What We Do", href: "#services" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Why Stavan", href: "#why-stavan" },
+    { name: "WHAT WE DO", href: "#services" },
+    { name: "HOW IT WORKS", href: "#how-it-works" },
+    { name: "WHY STAVAN", href: "#why-stavan" },
     { name: "FAQ", href: "#faq" },
   ];
 
@@ -29,68 +29,68 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-[#F7F4EC]/90 backdrop-blur-md border-b border-[#D8D5CC] shadow-[0_4px_20px_rgba(17,17,17,0.04)]"
-            : "py-5 bg-[#F7F4EC]/60 backdrop-blur-sm border-b border-[#D8D5CC]/60"
+            ? "py-3 bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#D8D5CE] shadow-[0_2px_12px_rgba(17,17,17,0.03)]"
+            : "py-4 sm:py-5 bg-[#F5F3EE]/80 backdrop-blur-sm border-b border-[#E8E5DC]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Brand Logo in Dark Charcoal */}
+            {/* Left: STAVAN Logo in Dark Charcoal */}
             <a
               href="#"
-              className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF542F]"
+              className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A36]"
               aria-label="STAVAN Home"
             >
               <Logo theme="light" size="md" showTagline />
             </a>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-1 px-4 py-1.5 bg-[#FFFFFF]/80 border border-[#D8D5CC] rounded-full backdrop-blur-sm shadow-[0_2px_8px_rgba(17,17,17,0.03)]">
+            {/* Center: Navigation Pill in Clean White / Cream */}
+            <nav className="hidden md:flex items-center gap-1 px-4 py-1.5 bg-[#FFFFFF] border border-[#D8D5CE] rounded-full shadow-[0_2px_8px_rgba(17,17,17,0.03)]">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-[#555555] hover:text-[#111111] hover:bg-[#F7F4EC] rounded-full transition-colors"
+                  className="px-3.5 py-1 text-xs font-mono tracking-wider text-[#555555] hover:text-[#111111] hover:bg-[#F5F3EE] rounded-full transition-colors font-medium"
                 >
                   {link.name}
                 </a>
               ))}
             </nav>
 
-            {/* Desktop Action CTAs */}
+            {/* Right: CTA TALK TO STAVAN ↗ */}
             <div className="hidden md:flex items-center gap-3">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-5 py-2.5 bg-[#111111] hover:bg-[#252525] text-[#F7F4EC] text-xs font-mono font-bold uppercase tracking-wider rounded-xl shadow-[0_2px_10px_rgba(17,17,17,0.1)] transition-all hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF5A36] hover:bg-[#e84e2c] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-xl shadow-[0_4px_14px_rgba(255,90,54,0.3)] transition-all hover:-translate-y-0.5"
               >
-                <span>Talk to Stavan</span>
-                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#FF542F]" />
+                <span>TALK TO STAVAN</span>
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
-            {/* Mobile Hamburger Button */}
+            {/* Mobile Actions */}
             <div className="flex items-center gap-2 md:hidden">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-[#111111] text-[#F7F4EC] rounded-lg shadow-sm"
+                className="p-2 bg-[#FF5A36] text-white rounded-lg shadow-sm"
                 aria-label="Chat on WhatsApp"
               >
-                <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                <MessageSquare className="w-4 h-4" />
               </a>
 
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 bg-white text-[#111111] border border-[#D8D5CC] rounded-lg focus:outline-none"
+                className="p-2 bg-white text-[#111111] border border-[#D8D5CE] rounded-lg focus:outline-none"
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="w-5 h-5 text-[#FF542F]" />
+                  <X className="w-5 h-5 text-[#FF5A36]" />
                 ) : (
                   <Menu className="w-5 h-5" />
                 )}
@@ -102,17 +102,17 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden bg-[#F7F4EC]/98 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-8">
+        <div className="fixed inset-0 z-40 md:hidden bg-[#F5F3EE]/98 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-8">
           <div className="flex flex-col space-y-3">
-            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#777777] pb-2 border-b border-[#D8D5CC]">
-              Navigation // Menu
+            <div className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#777777] pb-2 border-b border-[#D8D5CE]">
+              INDEX // NAVIGATION
             </div>
             {navLinks.map((link, idx) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-xl font-bold font-sans tracking-tight text-[#111111] hover:text-[#FF542F] py-3.5 border-b border-[#D8D5CC]/50 transition-colors"
+                className="flex items-center justify-between text-lg font-bold font-sans tracking-tight text-[#111111] hover:text-[#FF5A36] py-3.5 border-b border-[#E8E5DC] transition-colors"
               >
                 <span>
                   <span className="text-xs font-mono text-[#777777] mr-3">
@@ -131,10 +131,10 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-3 py-4 bg-[#111111] text-[#F7F4EC] text-sm font-mono font-bold uppercase tracking-wider rounded-xl shadow-[0_8px_20px_rgba(17,17,17,0.15)]"
+              className="w-full flex items-center justify-center gap-3 py-4 bg-[#FF5A36] text-white text-sm font-mono font-bold uppercase tracking-wider rounded-xl shadow-[0_8px_20px_rgba(255,90,54,0.3)]"
             >
-              <span>Talk to Stavan on WhatsApp</span>
-              <ArrowUpRight className="w-4 h-4 text-[#FF542F]" />
+              <span>TALK TO STAVAN ON WHATSAPP</span>
+              <ArrowUpRight className="w-4 h-4" />
             </a>
             <div className="text-center text-xs font-mono text-[#777777]">
               Direct founder line • +91 6377841469

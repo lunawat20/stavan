@@ -14,41 +14,41 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-ivory-primary text-[#111111]">
-      {/* 1. Sticky Light Navigation (Warm Ivory Translucent) */}
+    <main className="relative min-h-screen bg-canvas-ivory text-[#111111]">
+      {/* 1. Header: Clean Warm Ivory Navigation */}
       <Navbar />
 
-      {/* 2. Hero: Warm Ivory Canvas (#F7F4EC) + Floating Living Automation Engine */}
+      {/* 2. Hero: Warm Ivory Canvas + Large Cropped Geometric Squares + Floating Automation Engine */}
       <Hero />
 
-      {/* 3. Problem: Soft White Canvas (#FBFAF6) + Asymmetric Diagnostic Stack */}
+      {/* 3. Problem: Soft Cream Canvas + Outlined Geometric Squares + Asymmetric Stack */}
       <ProblemSection />
 
-      {/* 4. What We Build: Subtle Cool-Grey Canvas (#F1F3F2) + Asymmetric Bento Grid */}
+      {/* 4. What We Build: White Blueprint Grid Canvas + Asymmetric Bento Capabilities */}
       <ServicesGrid />
 
-      {/* 5. How It Works: Warm Ivory Canvas (#F7F4EC) + Live Status Telemetry Pipeline */}
+      {/* 5. How It Works: Warm Ivory Canvas + Large Geometric Structure + Elevated Active Card */}
       <ProcessSection />
 
-      {/* 6. Automation Examples: Light Warm Gradient Canvas + Before vs. After System Simulation */}
+      {/* 6. Automation Examples: Soft Cream Canvas + White Interactive Simulation Card */}
       <AutomationExamples />
 
-      {/* 7. Why Stavan: Soft Off-White Canvas (#FBFAF6) + Studio Operating Principles */}
+      {/* 7. Why Stavan: White Architectural Grid Canvas + Studio Principles */}
       <WhyStavan />
 
-      {/* 8. Complimentary Consultation: Dark Charcoal Contrast Canvas (#111111) */}
+      {/* 8. Complimentary Consultation: Warm Ivory Canvas + High-Impact White Studio Card */}
       <ConsultationSection />
 
-      {/* 9. FAQ: Warm Ivory Canvas (#F7F4EC) + Refined Physical Studio Accordions */}
+      {/* 9. FAQ: White Blueprint Grid Canvas + Architectural Physical Accordions */}
       <FAQ />
 
-      {/* 10. Final CTA: Dark Charcoal Contrast Canvas (#111111) */}
+      {/* 10. Final CTA: Warm Ivory Canvas + Large Geometric Accent + Orange Conversion */}
       <FinalCTA />
 
-      {/* 11. Studio Footer: Dark Charcoal (#111111) */}
+      {/* 11. Studio Footer: Soft Cream Canvas */}
       <Footer />
 
-      {/* 12. Floating WhatsApp Indicator */}
+      {/* 12. Floating WhatsApp White Studio Pill */}
       <WhatsAppButton />
     </main>
   );

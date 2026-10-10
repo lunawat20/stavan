@@ -41,8 +41,8 @@ export function AutomationEngine() {
       stage: "AI ENGINE",
       title: "Context Parsing & Intent",
       subtitle: "Entities extracted • Urgency verified • Match confirmed",
-      icon: <Cpu className="w-4 h-4 text-[#FF542F]" />,
-      accent: "#FF542F",
+      icon: <Cpu className="w-4 h-4 text-[#FF5A36]" />,
+      accent: "#FF5A36",
       status: activeStage === 1 ? "PROCESSING" : activeStage > 1 ? "DONE" : "WAITING",
     },
     {
@@ -68,8 +68,8 @@ export function AutomationEngine() {
       stage: "BUSINESS RESULT",
       title: "Action Dispatched",
       subtitle: "Tailored reply delivered • Founder notified on WhatsApp",
-      icon: <Send className="w-4 h-4 text-[#FF542F]" />,
-      accent: "#FF542F",
+      icon: <Send className="w-4 h-4 text-[#FF5A36]" />,
+      accent: "#FF5A36",
       status: activeStage === 4 ? "PROCESSING" : activeStage > 4 ? "DONE" : "WAITING",
     },
   ];
@@ -84,7 +84,7 @@ export function AutomationEngine() {
   }, [isSimulating]);
 
   return (
-    <div className="relative w-full rounded-2xl bg-[#FFFFFF] border border-[#D8D5CC] p-5 sm:p-7 shadow-[0_20px_50px_rgba(17,17,17,0.06)]">
+    <div className="relative w-full rounded-2xl bg-[#FFFFFF] border border-[#D8D5CE] p-5 sm:p-7 shadow-[0_20px_50px_rgba(17,17,17,0.06)]">
       {/* Studio Header Bar */}
       <div className="flex items-center justify-between pb-4 mb-5 border-b border-[#EBE7DC]">
         <div className="flex items-center gap-2.5">
@@ -92,14 +92,14 @@ export function AutomationEngine() {
           <span className="text-xs font-mono font-bold tracking-wider text-[#111111] uppercase">
             STAVAN AUTOMATION ENGINE
           </span>
-          <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-[#777777] bg-[#F7F4EC] rounded border border-[#E5E1D6]">
+          <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-[#777777] bg-[#F5F3EE] rounded border border-[#D8D5CE]">
             v2.6 LIVE
           </span>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 text-xs font-mono text-[#555555]">
-            <Zap className="w-3.5 h-3.5 text-[#FF542F]" />
+            <Zap className="w-3.5 h-3.5 text-[#FF5A36]" />
             <span className="text-[#111111] font-semibold">140ms</span>
           </div>
           <button
@@ -108,15 +108,15 @@ export function AutomationEngine() {
               setActiveStage((prev) => (prev + 1) % 5);
               setIsSimulating(false);
             }}
-            className="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-[#111111] bg-[#F7F4EC] hover:bg-[#EDE8DC] border border-[#D8D5CC] rounded-md transition-colors"
+            className="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-[#111111] bg-[#F5F3EE] hover:bg-[#EFECE5] border border-[#D8D5CE] rounded-md transition-colors"
           >
-            <Play className="w-3 h-3 text-[#FF542F]" />
+            <Play className="w-3 h-3 text-[#FF5A36]" />
             <span className="hidden sm:inline">CYCLE</span>
           </button>
         </div>
       </div>
 
-      {/* Nodes Stack with Thin Borders and Light Physical Object Styling */}
+      {/* Nodes Stack with Thin Borders and Physical White Card Objects */}
       <div className="relative space-y-3">
         {stages.map((node, idx) => {
           const isActive = idx === activeStage;
@@ -131,15 +131,15 @@ export function AutomationEngine() {
               }}
               className={`group cursor-pointer relative p-3.5 sm:p-4 rounded-xl border transition-all duration-200 ${
                 isActive
-                  ? "bg-[#FBFAF6] border-[#111111] shadow-[0_6px_20px_rgba(17,17,17,0.06)] translate-x-1"
-                  : "bg-[#FFFFFF] border-[#E8E4DA] hover:bg-[#FAF8F3] hover:border-[#D0CCC2]"
+                  ? "bg-[#FAF8F4] border-[#111111] shadow-[0_6px_20px_rgba(17,17,17,0.06)] translate-x-1"
+                  : "bg-[#FFFFFF] border-[#E8E4DA] hover:bg-[#FAF8F4] hover:border-[#D0CCC2]"
               }`}
             >
               {/* Subtle colored vertical indicator on left */}
               <div
                 className="absolute left-0 top-3 bottom-3 w-1 rounded-r transition-all"
                 style={{
-                  backgroundColor: isActive ? node.accent : isDone ? "#D8D5CC" : "transparent",
+                  backgroundColor: isActive ? node.accent : isDone ? "#D8D5CE" : "transparent",
                 }}
               />
 
@@ -176,14 +176,14 @@ export function AutomationEngine() {
                   <span
                     className={`inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-mono font-bold tracking-wider rounded ${
                       isActive
-                        ? "bg-[#FF542F]/10 text-[#FF542F] border border-[#FF542F]/25"
+                        ? "bg-[#FF5A36]/10 text-[#FF5A36] border border-[#FF5A36]/25"
                         : isDone
-                        ? "bg-[#F7F4EC] text-[#555555] border border-[#E5E1D6]"
+                        ? "bg-[#F5F3EE] text-[#555555] border border-[#E5E1D6]"
                         : "bg-transparent text-[#999999]"
                     }`}
                   >
                     {isDone && <Check className="w-2.5 h-2.5 text-[#111111]" />}
-                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF542F] animate-ping" />}
+                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A36] animate-ping" />}
                     {node.status}
                   </span>
                 </div>

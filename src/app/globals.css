@@ -1,25 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Elegant Light-First Palette */
-  --bg-primary-ivory: #F7F4EC;
-  --bg-soft-white: #FBFAF6;
-  --bg-cool-grey: #F1F3F2;
-  --bg-warm-tint: #F1EEE5;
-  --bg-warm-border: #D8D5CC;
+  /* Warm Ivory Architectural Palette */
+  --bg-primary-ivory: #F5F3EE;
+  --bg-soft-cream: #FAF8F4;
+  --bg-pure-white: #FFFFFF;
+  --bg-tint-cream: #EFECE5;
+  --border-studio: #D8D5CE;
+  --border-subtle: #E8E5DC;
   
-  --bg-dark-charcoal: #111111;
-  --bg-charcoal-card: #181818;
-  
-  --text-main: #111111;
+  --text-primary: #111111;
   --text-secondary: #555555;
   --text-muted: #777777;
   
-  --text-light: #F7F4EC;
-  --text-light-secondary: #A0A0A0;
-  
-  /* Stavan Accent Tokens */
-  --accent-orange: #FF542F;
+  /* Primary Stavan Coral/Orange */
+  --accent-orange: #FF5A36;
   --accent-cyan: #20C8E8;
   --accent-lime: #B6F23A;
   --accent-pink: #FF4D96;
@@ -36,82 +31,67 @@ html {
 
 body {
   background-color: var(--bg-primary-ivory);
-  color: var(--text-main);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle Technical Workflow Map on Light Background */
-.bg-workflow-light {
+/* Architectural Blueprint Grid (Large 120px cells, low contrast 5-7%) */
+.bg-blueprint-grid {
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(17, 17, 17, 0.08) 1px, transparent 0),
-    linear-gradient(to right, rgba(17, 17, 17, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(17, 17, 17, 0.02) 1px, transparent 1px);
-  background-size: 140px 140px, 140px 140px, 140px 140px;
-  background-position: 0 0, 0 0, 0 0;
+    linear-gradient(to right, rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.045) 1px, transparent 1px);
+  background-size: 120px 120px;
+  background-position: 0 0;
 }
 
-/* Technical Pattern on Dark Contrast Sections */
-.bg-workflow-dark {
+.bg-blueprint-grid-dense {
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(247, 244, 236, 0.1) 1px, transparent 0),
-    linear-gradient(to right, rgba(247, 244, 236, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(247, 244, 236, 0.025) 1px, transparent 1px);
-  background-size: 140px 140px, 140px 140px, 140px 140px;
-  background-position: 0 0, 0 0, 0 0;
+    linear-gradient(to right, rgba(17, 17, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-/* Section Background Variations */
-.bg-ivory-primary {
-  background-color: #F7F4EC;
+/* Background Atmosphere Classes */
+.bg-canvas-ivory {
+  background-color: #F5F3EE;
 }
 
-.bg-soft-white {
-  background-color: #FBFAF6;
+.bg-canvas-cream {
+  background-color: #FAF8F4;
 }
 
-.bg-subtle-grey {
-  background-color: #F1F3F2;
-}
-
-.bg-light-warm-grad {
-  background: linear-gradient(180deg, #F7F4EC 0%, #EFEBE0 50%, #F7F4EC 100%);
-}
-
-.bg-charcoal-dark {
-  background-color: #111111;
-}
-
-/* Elegant Physical Object Cards */
-.card-studio-light {
+.bg-canvas-white {
   background-color: #FFFFFF;
-  border: 1px solid #D8D5CC;
-  box-shadow: 0 2px 10px -2px rgba(17, 17, 17, 0.03), 0 1px 2px 0 rgba(17, 17, 17, 0.02);
+}
+
+.bg-canvas-tint {
+  background-color: #EFECE5;
+}
+
+/* Physical Studio White Cards */
+.card-studio {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D5CE;
+  box-shadow: 0 4px 20px -2px rgba(17, 17, 17, 0.035), 0 1px 3px 0 rgba(17, 17, 17, 0.02);
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
 }
 
-.card-studio-light:hover {
-  transform: translateY(-2px);
-  border-color: #B8B4A7;
-  box-shadow: 0 12px 28px -4px rgba(17, 17, 17, 0.06), 0 2px 6px -1px rgba(17, 17, 17, 0.03);
+.card-studio:hover {
+  transform: translateY(-3px);
+  border-color: #BCB8AD;
+  box-shadow: 0 16px 36px -4px rgba(17, 17, 17, 0.07), 0 4px 10px -2px rgba(17, 17, 17, 0.03);
 }
 
-.card-studio-dark {
-  background-color: #181818;
-  border: 1px solid rgba(247, 244, 236, 0.1);
-  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
+.card-studio-elevated {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D5CE;
+  box-shadow: 0 12px 36px -4px rgba(17, 17, 17, 0.06), 0 2px 8px -1px rgba(17, 17, 17, 0.03);
 }
 
-.card-studio-dark:hover {
-  transform: translateY(-2px);
-  border-color: rgba(247, 244, 236, 0.2);
-  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.6);
-}
-
-/* Subtle Conduit Flow */
+/* Flowing Conduit Animation */
 @keyframes conduitFlow {
   from {
     stroke-dashoffset: 40;

@@ -11,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { GeometricCanvas } from "./GeometricCanvas";
 
 export function AutomationExamples() {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,10 +20,10 @@ export function AutomationExamples() {
   const examples = [
     {
       id: "leads",
-      number: "SYSTEM / 01",
+      number: "SYSTEM // 01",
       title: "Lead Management Engine",
       icon: <Users className="w-4 h-4" />,
-      accent: "#FF542F",
+      accent: "#FF5A36",
       tagline: "From cold inquiry to CRM-synced appointment in under 60 seconds",
       manualPain: "Hours spent manually copying contact details from WhatsApp to spreadsheets while leads go cold.",
       automatedGain: "Instant intelligent qualification, calendar booking, CRM record creation, and founder alert.",
@@ -36,7 +37,7 @@ export function AutomationExamples() {
     },
     {
       id: "support",
-      number: "SYSTEM / 02",
+      number: "SYSTEM // 02",
       title: "Customer Support Concierge",
       icon: <MessageCircle className="w-4 h-4" />,
       accent: "#20C8E8",
@@ -53,7 +54,7 @@ export function AutomationExamples() {
     },
     {
       id: "operations",
-      number: "SYSTEM / 03",
+      number: "SYSTEM // 03",
       title: "Internal Operations Pipeline",
       icon: <FileText className="w-4 h-4" />,
       accent: "#B6F23A",
@@ -84,13 +85,15 @@ export function AutomationExamples() {
   return (
     <section
       id="automation-examples"
-      className="relative py-28 sm:py-36 bg-light-warm-grad bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
+      className="relative py-28 sm:py-36 bg-canvas-cream text-[#111111] border-b border-[#D8D5CE] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <GeometricCanvas variant="minimal" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF542F]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>IMAGINE THE POSSIBILITY</span>
           </div>
 
@@ -100,7 +103,7 @@ export function AutomationExamples() {
           >
             Imagine your business
             <br />
-            <span className="text-[#FF542F]">without the busywork.</span>
+            <span className="text-[#FF5A36]">without the busywork.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
@@ -120,13 +123,13 @@ export function AutomationExamples() {
                 onClick={() => setActiveTab(idx)}
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-mono text-xs sm:text-sm font-semibold tracking-wide border transition-all ${
                   isSelected
-                    ? "bg-[#111111] text-[#F7F4EC] border-[#111111] shadow-[0_6px_20px_rgba(17,17,17,0.12)]"
-                    : "bg-white text-[#555555] border-[#D8D5CC] hover:border-[#B8B4A7] hover:text-[#111111]"
+                    ? "bg-[#111111] text-[#F5F3EE] border-[#111111] shadow-[0_6px_20px_rgba(17,17,17,0.12)]"
+                    : "bg-white text-[#555555] border-[#D8D5CE] hover:border-[#B8B4A7] hover:text-[#111111]"
                 }`}
               >
                 <span
                   className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: isSelected ? ex.accent : "#D8D5CC" }}
+                  style={{ backgroundColor: isSelected ? ex.accent : "#D8D5CE" }}
                 />
                 <span>{ex.title}</span>
               </button>
@@ -135,10 +138,10 @@ export function AutomationExamples() {
         </div>
 
         {/* Showcase Container */}
-        <div className="card-studio-light rounded-3xl p-7 sm:p-10">
+        <div className="card-studio rounded-3xl p-7 sm:p-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-[#EBE7DC]">
             <div>
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF542F] uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF5A36] uppercase tracking-wider mb-1">
                 <span>{currentExample.number}</span>
                 <span>•</span>
                 <span>INTERACTIVE SIMULATION</span>
@@ -171,9 +174,9 @@ export function AutomationExamples() {
                   onClick={() => setActiveNode(nIdx)}
                   className={`cursor-pointer p-4 rounded-xl border transition-all ${
                     isCurrent
-                      ? "bg-[#FBFAF6] border-[#111111] shadow-[0_6px_16px_rgba(17,17,17,0.06)] -translate-y-1"
+                      ? "bg-[#FAF8F4] border-[#111111] shadow-[0_6px_16px_rgba(17,17,17,0.06)] -translate-y-1"
                       : isPassed
-                      ? "bg-[#F7F4EC] border-[#E5E1D6]"
+                      ? "bg-[#F5F3EE] border-[#E0DCD3]"
                       : "bg-[#FFFFFF] border-[#EBE7DC] opacity-80 hover:opacity-100"
                   }`}
                 >
@@ -187,7 +190,7 @@ export function AutomationExamples() {
                       <span
                         className="w-1.5 h-1.5 rounded-full"
                         style={{
-                          backgroundColor: isCurrent ? currentExample.accent : "#D8D5CC",
+                          backgroundColor: isCurrent ? currentExample.accent : "#D8D5CE",
                         }}
                       />
                     )}
@@ -207,8 +210,8 @@ export function AutomationExamples() {
 
           {/* Before vs After Impact Box */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-6 border-t border-[#EBE7DC]">
-            <div className="p-5 rounded-2xl bg-[#F7F4EC] border border-[#E5E1D6]">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF542F] uppercase tracking-wider mb-2">
+            <div className="p-5 rounded-2xl bg-[#F5F3EE] border border-[#E0DCD3]">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF5A36] uppercase tracking-wider mb-2">
                 <Clock className="w-4 h-4" />
                 <span>BEFORE (MANUAL DRAG)</span>
               </div>
@@ -217,7 +220,7 @@ export function AutomationExamples() {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border border-[#D8D5CC] shadow-[0_4px_16px_rgba(17,17,17,0.03)]">
+            <div className="p-5 rounded-2xl bg-white border border-[#D8D5CE] shadow-[0_4px_16px_rgba(17,17,17,0.03)]">
               <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#111111] uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4 text-[#20C8E8]" />
                 <span>AFTER (STAVAN SYSTEM)</span>
@@ -237,10 +240,10 @@ export function AutomationExamples() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111111] hover:bg-[#252525] text-[#F7F4EC] font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF5A36] hover:bg-[#e84e2c] text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl shadow-[0_4px_14px_rgba(255,90,54,0.3)] transition-all"
             >
               <span>Discuss this setup with Stavan</span>
-              <ArrowRight className="w-4 h-4 text-[#FF542F]" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </a>
           </div>
         </div>
