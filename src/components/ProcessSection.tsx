@@ -59,7 +59,7 @@ export function ProcessSection() {
   return (
     <section
       id="how-it-works"
-      className="relative py-28 sm:py-36 bg-canvas-sky bg-grid-sky text-[#111111] border-b border-[#B8D3E8] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-[#0F1012] bg-grid-dark text-white border-b border-white/10 overflow-hidden"
     >
       {/* Large Subtle Square / Grid Structure Behind Steps */}
       <GeometricCanvas variant="process" />
@@ -68,13 +68,13 @@ export function ProcessSection() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#B8D3E8] rounded-full text-xs font-mono tracking-widest text-[#426E92] mb-5 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#18191D] border border-white/15 rounded-full text-xs font-mono tracking-widest text-white/70 mb-5 shadow-sm">
               <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
               <span>HOW IT WORKS</span>
             </div>
 
             <h2
-              className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.08]"
               style={{ letterSpacing: "-0.03em" }}
             >
               From business problem
@@ -82,18 +82,18 @@ export function ProcessSection() {
               <span className="text-[#FF5A36]">to intelligent system.</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
+            <p className="text-base sm:text-lg text-white/60 font-sans leading-relaxed">
               No jargon. No unnecessary complexity. Just a systematic progression
               from friction to automated clarity.
             </p>
           </div>
 
           <div className="hidden lg:block w-72">
-            <StavanMotif theme="light" size="sm" showLabels />
+            <StavanMotif theme="dark" size="sm" showLabels />
           </div>
         </div>
 
-        {/* 4 Steps with Active Step as Elevated White Card with Orange Edge */}
+        {/* 4 Steps with Active Step as Elevated Dark Card with Orange Edge */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, idx) => {
             const isSelected = activeStep === idx;
@@ -110,50 +110,50 @@ export function ProcessSection() {
                 onClick={() => setActiveStep(idx)}
                 className={`rounded-2xl p-6 sm:p-7 flex flex-col justify-between cursor-pointer relative overflow-hidden transition-all duration-200 ${
                   isSelected
-                    ? "bg-[#FFFFFF] border-y border-r border-[#D8D5CE] border-l-4 border-l-[#FF5A36] shadow-[0_16px_36px_-4px_rgba(17,17,17,0.08)] -translate-y-1.5"
-                    : "bg-[#FFFFFF] border border-[#D8D5CE] hover:border-[#B8B4A7] hover:-translate-y-0.5 shadow-xs"
+                    ? "bg-[#18191E] border-y border-r border-white/20 border-l-4 border-l-[#FF5A36] shadow-[0_16px_36px_-4px_rgba(0,0,0,0.7)] -translate-y-1.5"
+                    : "bg-[#141518] border border-white/10 hover:border-white/20 text-white hover:-translate-y-0.5 shadow-sm"
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl font-bold text-[#111111]">
+                    <span className="font-mono text-2xl font-bold text-white">
                       {step.num}
                     </span>
 
                     <span
                       className={`text-[10px] font-mono px-2 py-0.5 rounded tracking-wider ${
                         isSelected
-                          ? "bg-[#FF5A36]/10 text-[#FF5A36] border border-[#FF5A36]/25 font-bold"
+                          ? "bg-[#FF5A36]/15 text-[#FF5A36] border border-[#FF5A36]/30 font-bold"
                           : isCompleted
-                          ? "bg-[#F5F3EE] text-[#555555] border border-[#E5E1D6]"
-                          : "text-[#888888]"
+                          ? "bg-[#222328] text-white/70 border border-white/10"
+                          : "text-white/40"
                       }`}
                     >
-                      {isCompleted && <Check className="w-2.5 h-2.5 inline mr-1 text-[#111111]" />}
+                      {isCompleted && <Check className="w-2.5 h-2.5 inline mr-1 text-white" />}
                       {statusLabel}
                     </span>
                   </div>
 
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#777777] mb-1">
+                  <div className="text-[10px] font-mono uppercase tracking-wider text-white/40 mb-1">
                     {step.code}
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold tracking-tight text-[#111111] font-sans mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold tracking-tight text-white font-sans mb-3">
                     {step.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm font-semibold text-[#222222] mb-3 leading-snug">
+                  <p className="text-xs sm:text-sm font-semibold text-white/90 mb-3 leading-snug">
                     {step.copy}
                   </p>
 
-                  <p className="text-xs text-[#555555] font-sans leading-relaxed">
+                  <p className="text-xs text-white/60 font-sans leading-relaxed">
                     {step.detail}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#EBE7DC] flex items-center justify-between text-xs font-mono text-[#777777]">
+                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white/40">
                   <span>STEP 0{idx + 1}</span>
-                  <span className={isSelected ? "text-[#FF5A36] font-bold" : "text-[#777777]"}>
+                  <span className={isSelected ? "text-[#FF5A36] font-bold" : "text-white/40"}>
                     →
                   </span>
                 </div>
@@ -163,12 +163,12 @@ export function ProcessSection() {
         </div>
 
         {/* Discovery CTA Strip */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-[#D8D5CE] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_6px_20px_rgba(17,17,17,0.03)]">
+        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-[#16171A] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-[#FF5A36] mb-1 font-semibold">
               ZERO RISK DISCOVERY
             </div>
-            <div className="text-base sm:text-lg font-bold text-[#111111]">
+            <div className="text-base sm:text-lg font-bold text-white">
               Ready to walk through what takes too much time in your business?
             </div>
           </div>

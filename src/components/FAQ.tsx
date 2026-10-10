@@ -54,31 +54,31 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 sm:py-36 bg-canvas-stone bg-drafting-dots text-[#111111] border-b border-[#CBC8BE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-[#0F1012] bg-grid-dark text-white border-b border-white/10 overflow-hidden"
     >
       <GeometricCanvas variant="faq" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#CBC8BE] rounded-full text-xs font-mono tracking-widest text-[#6B6960] mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#18191D] border border-white/15 rounded-full text-xs font-mono tracking-widest text-white/70 mb-5 shadow-sm">
             <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>FAQ</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Questions, answered.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#555555] font-sans">
+          <p className="text-base sm:text-lg text-white/60 font-sans">
             Clear, honest answers about how we partner with business owners.
           </p>
         </div>
 
-        {/* Accordion Stack on White Blueprint Canvas */}
+        {/* Accordion Stack on Dark Canvas */}
         <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -86,7 +86,7 @@ export function FAQ() {
             return (
               <div
                 key={idx}
-                className="card-studio rounded-2xl overflow-hidden transition-all"
+                className="card-studio-dark rounded-2xl overflow-hidden transition-all"
               >
                 <button
                   type="button"
@@ -94,8 +94,8 @@ export function FAQ() {
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 select-none focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold tracking-tight text-[#111111] font-sans">
-                    <span className="text-xs text-[#777777] mr-3 font-mono">
+                  <span className="text-base sm:text-lg font-bold tracking-tight text-white font-sans">
+                    <span className="text-xs text-white/40 mr-3 font-mono">
                       {idx < 9 ? `0${idx + 1}` : idx + 1}
                     </span>
                     {faq.q}
@@ -105,7 +105,7 @@ export function FAQ() {
                     className={`w-7 h-7 flex-shrink-0 rounded-lg flex items-center justify-center border transition-colors ${
                       isOpen
                         ? "bg-[#FF5A36] border-[#FF5A36] text-white"
-                        : "bg-[#F5F3EE] border-[#D8D5CE] text-[#555555]"
+                        : "bg-[#18191D] border-white/10 text-white/70"
                     }`}
                   >
                     {isOpen ? (
@@ -117,7 +117,7 @@ export function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#555555] font-sans leading-relaxed border-t border-[#EBE7DC]">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-white/70 font-sans leading-relaxed border-t border-white/10">
                     {faq.a}
                   </div>
                 )}
@@ -127,15 +127,15 @@ export function FAQ() {
         </div>
 
         {/* Direct WhatsApp Strip */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#FAF8F4] border border-[#D8D5CE] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_16px_rgba(17,17,17,0.02)]">
-          <div className="text-xs sm:text-sm font-mono text-[#555555]">
+        <div className="mt-12 p-6 rounded-2xl bg-[#16171A] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+          <div className="text-xs sm:text-sm font-mono text-white/70">
             Have a question specific to your software stack or industry?
           </div>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-[#111111] hover:text-[#FF5A36] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-white hover:text-[#FF5A36] transition-colors"
           >
             <span>Ask Stavan directly on WhatsApp</span>
             <span>→</span>

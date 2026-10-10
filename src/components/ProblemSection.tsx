@@ -49,7 +49,7 @@ export function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative py-28 sm:py-36 bg-canvas-clay bg-drafting-hatch text-[#111111] border-b border-[#DDD2C4] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-[#0F1012] bg-grid-dark text-white border-b border-white/10 overflow-hidden"
     >
       {/* Large Geometric Background Elements */}
       <GeometricCanvas variant="problem" />
@@ -59,13 +59,13 @@ export function ProblemSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Editorial Sticky Anchor */}
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CE] rounded-full text-xs font-mono tracking-widest text-[#555555] shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#18191D] border border-white/15 rounded-full text-xs font-mono tracking-widest text-white/70 shadow-sm">
               <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
               <span>THE REAL PROBLEM</span>
             </div>
 
             <h2
-              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#111111] leading-[1.08]"
+              className="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.08]"
               style={{ letterSpacing: "-0.03em" }}
             >
               Your business has problems.
@@ -73,16 +73,16 @@ export function ProblemSection() {
               <span className="text-[#FF5A36]">We find the ones AI can solve.</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
+            <p className="text-base sm:text-lg text-white/60 font-sans leading-relaxed">
               Too much of your team&apos;s time disappears into repetitive work,
               manual processes and disconnected tools.
             </p>
 
-            <div className="pt-4 border-t border-[#D8D5CE] hidden lg:block">
-              <div className="text-xs font-mono text-[#777777] uppercase tracking-wider mb-2">
+            <div className="pt-4 border-t border-white/10 hidden lg:block">
+              <div className="text-xs font-mono text-white/40 uppercase tracking-wider mb-2">
                 DIAGNOSTIC FRAMEWORK
               </div>
-              <p className="text-xs text-[#555555] leading-relaxed">
+              <p className="text-xs text-white/60 leading-relaxed">
                 We review workflows across customer acquisition, operations, and
                 back-office administration to pinpoint where manual drag can be
                 eliminated.
@@ -90,12 +90,12 @@ export function ProblemSection() {
             </div>
           </div>
 
-          {/* Right Column: Refined White Physical Cards Stack */}
+          {/* Right Column: Sleek Dark Physical Cards Stack */}
           <div className="lg:col-span-7 space-y-4">
             {problems.map((p) => (
               <div
                 key={p.num}
-                className="card-studio rounded-2xl p-6 sm:p-7 relative overflow-hidden group"
+                className="card-studio-dark rounded-2xl p-6 sm:p-7 relative overflow-hidden group"
               >
                 {/* Thin colored vertical indicator on the left spine */}
                 <div
@@ -106,10 +106,10 @@ export function ProblemSection() {
                 <div className="pl-3 sm:pl-4">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-sm font-bold text-[#777777]">
+                      <span className="font-mono text-sm font-bold text-white/40">
                         {p.num} //
                       </span>
-                      <span className="text-[11px] font-mono tracking-wider text-[#555555] uppercase">
+                      <span className="text-[11px] font-mono tracking-wider text-white/50 uppercase">
                         {p.subtitle}
                       </span>
                     </div>
@@ -117,27 +117,27 @@ export function ProblemSection() {
                     <div
                       className="w-8 h-8 rounded-lg flex items-center justify-center"
                       style={{
-                        backgroundColor: `${p.accent}14`,
-                        border: `1px solid ${p.accent}30`,
+                        backgroundColor: `${p.accent}18`,
+                        border: `1px solid ${p.accent}35`,
                       }}
                     >
                       {p.icon}
                     </div>
                   </div>
 
-                  <h3 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-[#111111] mb-2">
+                  <h3 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-white mb-2">
                     {p.title}
                   </h3>
 
-                  <p className="text-sm text-[#555555] font-sans leading-relaxed">
+                  <p className="text-sm text-white/60 font-sans leading-relaxed">
                     {p.description}
                   </p>
 
-                  <div className="mt-4 pt-3 border-t border-[#EBE7DC] flex items-center justify-between text-[11px] font-mono text-[#777777]">
+                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/40">
                     <span className="uppercase tracking-wider font-semibold">
                       FRICTION PATTERN: {p.tag}
                     </span>
-                    <span className="flex items-center gap-1 group-hover:text-[#111111] transition-colors">
+                    <span className="flex items-center gap-1 group-hover:text-white transition-colors">
                       AUTOMATABLE <ArrowRight className="w-3 h-3 text-[#FF5A36]" />
                     </span>
                   </div>

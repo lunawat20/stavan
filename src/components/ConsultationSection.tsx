@@ -32,7 +32,7 @@ export function ConsultationSection() {
 
           <div className="max-w-4xl mx-auto">
             {/* Consultation Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 bg-[#F5F3EE] border border-[#D8D5CE] rounded-full">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 bg-[#FBF3EA] border border-[#E8CBB5] rounded-full">
               <Sparkles className="w-3.5 h-3.5 text-[#FF5A36]" />
               <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#111111]">
                 COMPLIMENTARY CONSULTATION

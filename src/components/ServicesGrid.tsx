@@ -112,7 +112,7 @@ export function ServicesGrid() {
   return (
     <section
       id="services"
-      className="relative py-28 sm:py-36 bg-canvas-sage bg-grid-sage text-[#111111] border-b border-[#BED9C4] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-canvas-sand bg-grid-warm text-[#111111] border-b border-[#E2DDD3] overflow-hidden"
     >
       {/* Large Geometric Background Elements */}
       <GeometricCanvas variant="services" />
@@ -120,8 +120,8 @@ export function ServicesGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FFFFFF] border border-[#BED9C4] rounded-full text-xs font-mono tracking-widest text-[#4A7855] mb-5 shadow-sm">
-            <span className="w-1.5 h-1.5 bg-[#20C8E8]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FFFFFF] border border-[#E2DDD3] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>WHAT WE BUILD</span>
           </div>
 

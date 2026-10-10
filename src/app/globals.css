@@ -54,62 +54,16 @@ body {
   background-size: 60px 60px;
 }
 
-/* Background Atmosphere Classes (Rich Light Tonal System) */
+/* Two-Color Architectural System */
 .bg-canvas-sand {
   background-color: #FBF3EA;
 }
 
-.bg-canvas-clay {
-  background-color: #F3EBE1;
-}
-
-.bg-canvas-sage {
-  background-color: #EBF5ED;
-}
-
-.bg-canvas-sky {
-  background-color: #EAF2F8;
-}
-
-.bg-canvas-champagne {
-  background-color: #FAF3E0;
-}
-
-.bg-canvas-lilac {
-  background-color: #F2EEF8;
-}
-
-.bg-canvas-stone {
-  background-color: #EFEFEA;
-}
-
-.bg-canvas-ivory {
-  background-color: #F5F3EE;
-}
-
-.bg-canvas-cream {
-  background-color: #FAF8F4;
-}
-
-.bg-canvas-white {
-  background-color: #FFFFFF;
+.bg-canvas-dark {
+  background-color: #0F1012;
 }
 
 /* Colored Architectural Grid Variants */
-.bg-grid-sage {
-  background-image: 
-    linear-gradient(to right, rgba(46, 125, 74, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(46, 125, 74, 0.06) 1px, transparent 1px);
-  background-size: 100px 100px;
-}
-
-.bg-grid-sky {
-  background-image: 
-    linear-gradient(to right, rgba(32, 120, 200, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(32, 120, 200, 0.06) 1px, transparent 1px);
-  background-size: 100px 100px;
-}
-
 .bg-grid-warm {
   background-image: 
     linear-gradient(to right, rgba(200, 110, 60, 0.055) 1px, transparent 1px),
@@ -117,23 +71,25 @@ body {
   background-size: 100px 100px;
 }
 
-/* Architectural Drafting Hatch & Dot Patterns */
-.bg-drafting-hatch {
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(17, 17, 17, 0.02),
-    rgba(17, 17, 17, 0.02) 2px,
-    transparent 2px,
-    transparent 12px
-  );
+.bg-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100px 100px;
 }
 
-.bg-drafting-dots {
-  background-image: radial-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* Architectural Textures (Clean Dot Matrices - Zero Inclined Lines) */
+.bg-texture-dots-orange {
+  background-image: radial-gradient(rgba(255, 90, 54, 0.12) 1.2px, transparent 1.2px);
+  background-size: 18px 18px;
 }
 
-/* Physical Studio White Cards */
+.bg-texture-dots-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 18px 18px;
+}
+
+/* Physical Studio White Cards (Light Sections) */
 .card-studio {
   background-color: #FFFFFF;
   border: 1px solid #D8D5CE;
@@ -151,6 +107,20 @@ body {
   background-color: #FFFFFF;
   border: 1px solid #D8D5CE;
   box-shadow: 0 12px 36px -4px rgba(17, 17, 17, 0.06), 0 2px 8px -1px rgba(17, 17, 17, 0.03);
+}
+
+/* Physical Studio Dark Cards (Black Sections) */
+.card-studio-dark {
+  background-color: #151619;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
+}
+
+.card-studio-dark:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.6), 0 4px 10px -2px rgba(0, 0, 0, 0.4);
 }
 
 /* Flowing Conduit Animation */

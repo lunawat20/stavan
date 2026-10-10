@@ -8,15 +8,7 @@ export function FinalCTA() {
   return (
     <section className="relative py-28 sm:py-36 bg-canvas-sand bg-grid-warm text-[#111111] border-b border-[#E2DDD3] overflow-hidden">
       {/* Large Geometric Background Elements */}
-      <GeometricCanvas variant="hero" />
-
-      {/* Studio Coordinate Badges */}
-      <div className="absolute top-8 left-8 text-[11px] font-mono text-[#777777] hidden md:block">
-        [ SYSTEM // ENGAGE ]
-      </div>
-      <div className="absolute bottom-8 right-8 text-[11px] font-mono text-[#777777] hidden md:block">
-        [ FOUNDER LINE: +91 6377841469 ]
-      </div>
+      <GeometricCanvas variant="orange" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

@@ -49,20 +49,20 @@ export function WhyStavan() {
   return (
     <section
       id="why-stavan"
-      className="relative py-28 sm:py-36 bg-canvas-lilac bg-drafting-hatch text-[#111111] border-b border-[#CAC0DE] overflow-hidden"
+      className="relative py-28 sm:py-36 bg-[#0F1012] bg-grid-dark text-white border-b border-white/10 overflow-hidden"
     >
       <GeometricCanvas variant="whystavan" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#CAC0DE] rounded-full text-xs font-mono tracking-widest text-[#695886] mb-5 shadow-sm">
-            <span className="w-1.5 h-1.5 bg-[#FF4D96]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#18191D] border border-white/15 rounded-full text-xs font-mono tracking-widest text-white/70 mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 bg-[#FF5A36]" />
             <span>WHY STAVAN</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             We don&apos;t automate for
@@ -70,17 +70,17 @@ export function WhyStavan() {
             <span className="text-[#FF5A36]">the sake of automation.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
+          <p className="text-base sm:text-lg text-white/60 font-sans leading-relaxed">
             Our compass is utility, dependability, and measurable business leverage.
           </p>
         </div>
 
-        {/* 4 Studio Principle Cards on Architectural Grid */}
+        {/* 4 Studio Principle Cards on Dark Architectural Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {principles.map((item) => (
             <div
               key={item.num}
-              className="card-studio rounded-2xl p-7 sm:p-9 relative overflow-hidden group flex flex-col justify-between"
+              className="card-studio-dark rounded-2xl p-7 sm:p-9 relative overflow-hidden group flex flex-col justify-between"
             >
               {/* Subtle vertical indicator */}
               <div
@@ -91,10 +91,10 @@ export function WhyStavan() {
               <div className="pl-3 sm:pl-4">
                 <div className="flex items-start justify-between gap-4 mb-6">
                   <div>
-                    <span className="font-mono text-xs font-semibold tracking-wider text-[#777777] uppercase mb-1 block">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-white/40 uppercase mb-1 block">
                       {item.code}
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#111111] font-sans">
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white font-sans">
                       {item.title}
                     </h3>
                   </div>
@@ -102,19 +102,19 @@ export function WhyStavan() {
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      backgroundColor: `${item.accent}14`,
-                      border: `1px solid ${item.accent}30`,
+                      backgroundColor: `${item.accent}18`,
+                      border: `1px solid ${item.accent}35`,
                     }}
                   >
                     {item.icon}
                   </div>
                 </div>
 
-                <div className="text-base sm:text-lg font-bold text-[#111111] mb-3 leading-snug font-sans">
+                <div className="text-base sm:text-lg font-bold text-white mb-3 leading-snug font-sans">
                   {item.copy}
                 </div>
 
-                <p className="text-sm text-[#555555] leading-relaxed font-sans">
+                <p className="text-sm text-white/60 leading-relaxed font-sans">
                   {item.detail}
                 </p>
               </div>

@@ -18,9 +18,9 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-canvas-clay text-[#111111] pt-20 pb-12 border-t border-[#DDD2C4]">
+    <footer className="bg-canvas-sand text-[#111111] pt-20 pb-12 border-t border-[#E2DDD3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-[#DDD2C4]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-[#E2DDD3]">
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <Logo theme="light" size="lg" />
@@ -39,7 +39,7 @@ export function Footer() {
 
           {/* Quick Links Column */}
           <div className="md:col-span-3 space-y-4">
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#111111] pb-2 border-b border-[#DDD2C4]">
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#111111] pb-2 border-b border-[#E2DDD3]">
               INDEX // NAVIGATION
             </div>
             <ul className="space-y-2.5">
@@ -58,7 +58,7 @@ export function Footer() {
 
           {/* Direct Founder & Contact Column */}
           <div className="md:col-span-4 space-y-4">
-            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#111111] pb-2 border-b border-[#DDD2C4]">
+            <div className="font-mono text-xs font-bold uppercase tracking-widest text-[#111111] pb-2 border-b border-[#E2DDD3]">
               STUDIO // CONTACT
             </div>
             <div className="space-y-2 text-xs font-mono text-[#555555]">

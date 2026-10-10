@@ -11,14 +11,6 @@ export function Hero() {
       {/* Large Architectural Geometric Canvas in Background */}
       <GeometricCanvas variant="hero" />
 
-      {/* Blueprint Coordinates */}
-      <div className="absolute top-28 left-8 text-[11px] font-mono text-[#777777] hidden lg:block tracking-widest z-10">
-        SYS.SPEC // 26.91°N
-      </div>
-      <div className="absolute top-28 right-8 text-[11px] font-mono text-[#777777] hidden lg:block tracking-widest z-10">
-        ARCH // 2026
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* LEFT COLUMN: Editorial Storytelling */}
