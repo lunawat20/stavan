@@ -11,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { StavanMotif } from "./StavanMotif";
 
 export function AutomationExamples() {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,85 +20,83 @@ export function AutomationExamples() {
   const examples = [
     {
       id: "leads",
-      number: "EXAMPLE 01",
-      title: "LEAD MANAGEMENT",
+      number: "SYSTEM / 01",
+      title: "Lead Management Engine",
       icon: <Users className="w-4 h-4" />,
       accent: "#FF4B2B",
       tagline: "From cold inquiry to CRM-synced appointment in under 60 seconds",
-      manualPain: "Hours spent manually copying details from WhatsApp to spreadsheets while leads go cold.",
+      manualPain: "Hours spent manually copying contact details from WhatsApp to spreadsheets while leads go cold.",
       automatedGain: "Instant intelligent qualification, calendar booking, CRM record creation, and founder alert.",
       nodes: [
-        { title: "New enquiry", desc: "Received via WhatsApp / Form", type: "trigger" },
-        { title: "AI qualification", desc: "Evaluates budget, scope & urgency", type: "ai" },
-        { title: "CRM update", desc: "Creates deal & assigns pipeline stage", type: "system" },
-        { title: "Personalized response", desc: "Dispatches tailored consultation invite", type: "action" },
-        { title: "Sales notification", desc: "Alerts founder with pre-qualified dossier", type: "complete" },
+        { title: "New enquiry", desc: "Received via WhatsApp / Web form", stage: "TRIGGER" },
+        { title: "AI qualification", desc: "Evaluates budget, scope & timeline", stage: "INTELLIGENCE" },
+        { title: "CRM update", desc: "Generates deal & assigns pipeline stage", stage: "SYNC" },
+        { title: "Personalized response", desc: "Dispatches tailored consultation invite", stage: "ACTION" },
+        { title: "Sales notification", desc: "Alerts founder with pre-qualified dossier", stage: "RESULT" },
       ],
     },
     {
       id: "support",
-      number: "EXAMPLE 02",
-      title: "CUSTOMER SUPPORT",
+      number: "SYSTEM / 02",
+      title: "Customer Support Concierge",
       icon: <MessageCircle className="w-4 h-4" />,
       accent: "#20C8E8",
       tagline: "24/7 immediate assistance that answers FAQs and routes edge cases",
-      manualPain: "Answering the same 10 pricing, hours, or order status questions all day long.",
+      manualPain: "Answering the same 10 pricing, operating hours, or order status questions all day long.",
       automatedGain: "80% of routine questions resolved in 2 seconds; only critical issues reach your desk.",
       nodes: [
-        { title: "Customer message", desc: "Inquiry received on WhatsApp / Web", type: "trigger" },
-        { title: "AI understands request", desc: "Recognizes nuance, intent & emotion", type: "ai" },
-        { title: "Answers common questions", desc: "Draws verified data from business knowledge", type: "system" },
-        { title: "Escalates complex requests", desc: "Flags unusual requests directly to team", type: "action" },
-        { title: "Records interaction", desc: "Stores transcript & resolution telemetry", type: "complete" },
+        { title: "Customer message", desc: "Inquiry received on WhatsApp / Web", stage: "TRIGGER" },
+        { title: "AI understands request", desc: "Recognizes nuance, intent & emotion", stage: "INTELLIGENCE" },
+        { title: "Answers common questions", desc: "Draws verified data from business knowledge", stage: "SYNC" },
+        { title: "Escalates complex requests", desc: "Flags unusual requests directly to team", stage: "ACTION" },
+        { title: "Records interaction", desc: "Stores transcript & resolution telemetry", stage: "RESULT" },
       ],
     },
     {
       id: "operations",
-      number: "EXAMPLE 03",
-      title: "INTERNAL OPERATIONS",
+      number: "SYSTEM / 03",
+      title: "Internal Operations Pipeline",
       icon: <FileText className="w-4 h-4" />,
       accent: "#B7FF2A",
       tagline: "Transforming messy inbox attachments into synchronized accounting records",
       manualPain: "Manually opening invoices, re-typing line items into software, and writing weekly summaries.",
       automatedGain: "Automated document ingestion, data extraction, ledger update, and scheduled management report.",
       nodes: [
-        { title: "Email / Document", desc: "Invoice or vendor bill arrives", type: "trigger" },
-        { title: "AI extracts information", desc: "Parses vendor, date, line items & amounts", type: "ai" },
-        { title: "Processes data", desc: "Validates against purchase orders & rules", type: "system" },
-        { title: "Updates system", desc: "Posts entries to accounting & inventory", type: "action" },
-        { title: "Generates report", desc: "Dispatches weekly executive digest", type: "complete" },
+        { title: "Email / Document", desc: "Invoice or vendor bill arrives", stage: "TRIGGER" },
+        { title: "AI extracts information", desc: "Parses vendor, date, line items & amounts", stage: "INTELLIGENCE" },
+        { title: "Processes data", desc: "Validates against purchase orders & rules", stage: "SYNC" },
+        { title: "Updates system", desc: "Posts entries to accounting & inventory", stage: "ACTION" },
+        { title: "Generates report", desc: "Dispatches weekly executive digest", stage: "RESULT" },
       ],
     },
   ];
 
   const currentExample = examples[activeTab];
 
-  // Auto animate nodes of active example
+  // Auto progression loop
   useEffect(() => {
     setActiveNode(0);
     const interval = setInterval(() => {
       setActiveNode((prev) => (prev + 1) % currentExample.nodes.length);
-    }, 2000);
+    }, 2200);
     return () => clearInterval(interval);
   }, [activeTab, currentExample.nodes.length]);
 
   return (
     <section
       id="automation-examples"
-      className="relative py-24 sm:py-32 bg-[#F4EFDF] bg-grid-cream text-[#111111] border-b-2 border-[#111111]"
+      className="relative py-28 sm:py-36 bg-warm-gradient bg-system-map-light text-[#121316] border-b border-black/[0.08]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-[#FAF7EE] border-2 border-[#111111] shadow-[3px_3px_0px_#111111]">
-            <span className="w-2 h-2 bg-[#20C8E8]" />
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#111111]">
-              IMAGINE THE POSSIBILITY
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B2B]" />
+            <span>IMAGINE THE POSSIBILITY</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#111111] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Imagine your business
@@ -105,148 +104,126 @@ export function AutomationExamples() {
             <span className="text-[#FF4B2B]">without the busywork.</span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-[#4A4740] font-sans leading-relaxed">
-            Real architectural examples of how manual repetitive drag turns into
-            reliable, self-running systems.
+          <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
+            Real architectural blueprints of how repetitive operational drag turns
+            into dependable, automated pipelines.
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-3 sm:gap-4 mb-8">
+        {/* Tab Switcher */}
+        <div className="flex flex-wrap gap-3 mb-8">
           {examples.map((ex, idx) => {
             const isSelected = activeTab === idx;
             return (
               <button
                 key={ex.id}
+                type="button"
                 onClick={() => setActiveTab(idx)}
-                className={`flex items-center gap-2.5 px-4 sm:px-6 py-3 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider border-2 border-[#111111] transition-all duration-150 ${
+                className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-mono text-xs sm:text-sm font-semibold tracking-wide border transition-all ${
                   isSelected
-                    ? "bg-[#111111] text-[#FAF7EE] shadow-[4px_4px_0px_#FF4B2B] -translate-x-0.5 -translate-y-0.5"
-                    : "bg-[#FAF7EE] text-[#111111] shadow-[3px_3px_0px_#111111] hover:bg-[#FFFFFF]"
+                    ? "bg-[#121316] text-[#FAF8F3] border-[#121316] shadow-[0_8px_20px_rgba(18,19,22,0.15)]"
+                    : "bg-white text-[#575A65] border-black/10 hover:border-black/20 hover:text-[#121316]"
                 }`}
               >
-                <div
-                  className="w-4 h-4 rounded-none flex items-center justify-center text-[10px]"
-                  style={{
-                    backgroundColor: isSelected ? ex.accent : "#E0DCD3",
-                    color: "#111111",
-                  }}
-                >
-                  {idx + 1}
-                </div>
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: isSelected ? ex.accent : "#C2C6D2" }}
+                />
                 <span>{ex.title}</span>
               </button>
             );
           })}
         </div>
 
-        {/* Active Example Showcase Card */}
-        <div className="bg-[#FAF7EE] border-2 border-[#111111] p-6 sm:p-10 shadow-[8px_8px_0px_#111111]">
-          {/* Header of Active Workflow */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b-2 border-[#111111]">
+        {/* Showcase Container */}
+        <div className="studio-card-light rounded-3xl p-7 sm:p-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-black/[0.08]">
             <div>
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF4B2B] uppercase tracking-widest mb-1">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF4B2B] uppercase tracking-wider mb-1">
                 <span>{currentExample.number}</span>
                 <span>•</span>
-                <span>SYSTEM SIMULATION</span>
+                <span>INTERACTIVE SIMULATION</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black font-mono tracking-tight text-[#111111]">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#121316] font-sans">
                 {currentExample.title}
               </h3>
-              <p className="text-sm sm:text-base text-[#4A4740] font-sans mt-1">
+              <p className="text-sm sm:text-base text-[#575A65] font-sans mt-1">
                 {currentExample.tagline}
               </p>
             </div>
 
-            <div className="flex items-center gap-2 self-start md:self-auto">
-              <span className="w-2.5 h-2.5 bg-[#B7FF2A] border border-black animate-pulse" />
-              <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#111111]">
-                STATUS: AUTORUN ACTIVE
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#20C8E8] animate-ping" />
+              <span className="font-mono text-xs text-[#575A65] uppercase tracking-wider">
+                PIPELINE STATUS: SYNCHRONIZED
               </span>
             </div>
           </div>
 
-          {/* Living Interactive Flowchart / Step Stream */}
-          <div className="mb-10">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#7A766E] mb-4">
-              EXECUTION PIPELINE // STEP 0{activeNode + 1} OF 0
-              {currentExample.nodes.length}
-            </div>
+          {/* Stepped Process Stream */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5 mb-10">
+            {currentExample.nodes.map((node, nIdx) => {
+              const isCurrent = nIdx === activeNode;
+              const isPassed = nIdx < activeNode;
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-3 relative">
-              {currentExample.nodes.map((node, nIdx) => {
-                const isCurrent = nIdx === activeNode;
-                const isPassed = nIdx < activeNode;
-
-                return (
-                  <div
-                    key={nIdx}
-                    onClick={() => setActiveNode(nIdx)}
-                    style={{
-                      borderColor: isCurrent ? "#111111" : "#D4CFBE",
-                      backgroundColor: isCurrent
-                        ? "#FFFFFF"
-                        : isPassed
-                        ? "#F0EADB"
-                        : "#FAF7EE",
-                      boxShadow: isCurrent
-                        ? `4px 4px 0px ${currentExample.accent}`
-                        : "2px 2px 0px rgba(0,0,0,0.06)",
-                    }}
-                    className={`cursor-pointer p-4 border-2 transition-all relative ${
-                      isCurrent ? "-translate-y-1" : "hover:border-[#111111]"
-                    }`}
-                  >
-                    {/* Step indicator top */}
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-mono text-[11px] font-bold text-[#7A766E]">
-                        0{nIdx + 1}
-                      </span>
-                      {isPassed ? (
-                        <CheckCircle className="w-3.5 h-3.5 text-[#111111]" />
-                      ) : (
-                        <span
-                          className="w-2 h-2 rounded-none"
-                          style={{
-                            backgroundColor: isCurrent
-                              ? currentExample.accent
-                              : "#D4CFBE",
-                          }}
-                        />
-                      )}
-                    </div>
-
-                    <div className="font-mono text-xs sm:text-sm font-bold text-[#111111] mb-1">
-                      {node.title}
-                    </div>
-
-                    <div className="text-[11px] text-[#5A574E] font-sans leading-tight">
-                      {node.desc}
-                    </div>
+              return (
+                <div
+                  key={nIdx}
+                  onClick={() => setActiveNode(nIdx)}
+                  className={`cursor-pointer p-4 rounded-xl border transition-all ${
+                    isCurrent
+                      ? "bg-white border-[#121316] shadow-[0_8px_20px_rgba(0,0,0,0.06)] -translate-y-1"
+                      : isPassed
+                      ? "bg-[#F7F5EE] border-black/[0.06]"
+                      : "bg-[#FAFAF7] border-black/[0.04] opacity-80 hover:opacity-100"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-[10px] font-bold tracking-wider text-[#888C99]">
+                      {node.stage}
+                    </span>
+                    {isPassed ? (
+                      <CheckCircle className="w-3.5 h-3.5 text-[#121316]" />
+                    ) : (
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{
+                          backgroundColor: isCurrent ? currentExample.accent : "#D0D3DC",
+                        }}
+                      />
+                    )}
                   </div>
-                );
-              })}
-            </div>
+
+                  <div className="font-sans text-xs sm:text-sm font-bold text-[#121316] mb-1">
+                    {node.title}
+                  </div>
+
+                  <div className="text-[11px] text-[#575A65] font-sans leading-snug">
+                    {node.desc}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Before vs After Impact Box */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t-2 border-[#111111]">
-            <div className="p-4 sm:p-5 bg-[#EAE4D2] border border-[#111111]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-6 border-t border-black/[0.08]">
+            <div className="p-5 rounded-2xl bg-[#F4EFE6] border border-black/[0.06]">
               <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF4B2B] uppercase tracking-wider mb-2">
                 <Clock className="w-4 h-4" />
                 <span>BEFORE (MANUAL DRAG)</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#4A4740] font-sans leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#575A65] font-sans leading-relaxed">
                 {currentExample.manualPain}
               </p>
             </div>
 
-            <div className="p-4 sm:p-5 bg-[#FFFFFF] border-2 border-[#111111] shadow-[3px_3px_0px_#111111]">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#111111] uppercase tracking-wider mb-2">
+            <div className="p-5 rounded-2xl bg-white border border-black/[0.1] shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#121316] uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4 text-[#20C8E8]" />
                 <span>AFTER (STAVAN SYSTEM)</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#111111] font-sans font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#121316] font-sans font-medium leading-relaxed">
                 {currentExample.automatedGain}
               </p>
             </div>
@@ -254,14 +231,14 @@ export function AutomationExamples() {
 
           {/* Action Row */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-xs font-mono text-[#7A766E]">
-              Want a similar automated pipeline for your workflow?
+            <div className="text-xs font-mono text-[#575A65]">
+              Interested in a similar automated pipeline for your workflow?
             </div>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111111] text-[#FAF7EE] font-mono text-xs font-bold uppercase tracking-wider border-2 border-black shadow-[3px_3px_0px_#FF4B2B] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#121316] hover:bg-[#202228] text-[#FAF8F3] font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
             >
               <span>Discuss this setup with Stavan</span>
               <ArrowRight className="w-4 h-4 text-[#FF4B2B]" />

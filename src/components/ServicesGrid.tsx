@@ -15,93 +15,107 @@ export function ServicesGrid() {
   const services = [
     {
       id: "ai-agents",
-      title: "AI AGENTS",
-      description: "Systems that can handle tasks, conversations and decisions.",
-      tag: "AUTONOMOUS LOGIC",
-      accent: "#FF4B2B",
-      icon: <Bot className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-2",
-      features: ["Multi-step task execution", "Rule-based & AI decision trees", "Data extraction & synthesis"],
+      title: "AI Agents",
+      code: "CAPABILITY / 01",
+      description: "Systems that can handle tasks, conversations and decisions autonomously.",
+      features: [
+        "Multi-step task execution",
+        "Rule-based & AI decision trees",
+        "Context synthesis & action dispatch",
+      ],
+      icon: <Bot className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-8",
+      accent: "#20C8E8",
     },
     {
       id: "whatsapp-auto",
-      title: "WHATSAPP AUTOMATION",
-      description: "Turn conversations into automated workflows.",
-      tag: "PRIMARY TOUCHPOINT",
+      title: "WhatsApp Automation",
+      code: "CAPABILITY / 02",
+      description: "Turn customer conversations into automated business workflows.",
+      features: [
+        "Instant inquiry qualification",
+        "Automated booking & quotation",
+        "Interactive service catalogs",
+      ],
+      icon: <MessageCircle className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-4",
       accent: "#20C8E8",
-      icon: <MessageCircle className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-1",
-      features: ["Instant customer triage", "Catalog & quote dispatch", "Interactive booking flows"],
     },
     {
       id: "crm-auto",
-      title: "CRM AUTOMATION",
+      title: "CRM Automation",
+      code: "CAPABILITY / 03",
       description: "Capture, organize and follow up with leads automatically.",
-      tag: "PIPELINE RETENTION",
-      accent: "#B7FF2A",
-      icon: <Users className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-1",
-      features: ["Zero lead drop-off", "Automatic stage progression", "Follow-up triggers"],
+      features: [
+        "Zero dropped inquiries",
+        "Auto stage progression",
+        "Pipeline alerts & sync",
+      ],
+      icon: <Users className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-4",
+      accent: "#20C8E8",
     },
     {
       id: "workflow-auto",
-      title: "WORKFLOW AUTOMATION",
-      description: "Connect the tools your business already uses.",
-      tag: "TOOL INTEROP",
-      accent: "#FF4C9A",
-      icon: <GitFork className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-2",
-      features: ["Sheets, Email, ERP synchronization", "Invoice generation & billing alerts", "Error-free cross-platform sync"],
+      title: "Workflow Automation",
+      code: "CAPABILITY / 04",
+      description: "Connect the tools your business already uses — spreadsheets, email, billing, and databases.",
+      features: [
+        "Eliminate duplicate copy-paste",
+        "Instant cross-platform triggers",
+        "Zero-error data transfers",
+      ],
+      icon: <GitFork className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-8",
+      accent: "#20C8E8",
     },
     {
       id: "ai-websites",
-      title: "AI WEBSITES",
-      description: "Web experiences designed around intelligent interactions.",
-      tag: "HIGH CONVERSION",
-      accent: "#FFD43B",
-      icon: <Globe className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-1",
-      features: ["Context-aware user journeys", "Automated booking integration", "Dynamic lead qualification"],
+      title: "AI Websites",
+      code: "CAPABILITY / 05",
+      description: "Web experiences designed around intelligent, dynamic interactions.",
+      features: ["Context-aware user paths", "Direct booking conversion"],
+      icon: <Globe className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-4",
+      accent: "#20C8E8",
     },
     {
       id: "custom-software",
-      title: "CUSTOM SOFTWARE",
-      description: "When an off-the-shelf solution isn't enough.",
-      tag: "BESPOKE SYSTEMS",
-      accent: "#FAF7EE",
-      icon: <Code2 className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-1",
-      features: ["Tailored internal operations tools", "Specialized team portals", "Proprietary database interfaces"],
+      title: "Custom Software",
+      code: "CAPABILITY / 06",
+      description: "When an off-the-shelf software tool isn't enough for your specific operational model.",
+      features: ["Tailored staff dashboards", "Proprietary business portals"],
+      icon: <Code2 className="w-5 h-5 text-[#20C8E8]" />,
+      colSpan: "lg:col-span-4",
+      accent: "#20C8E8",
     },
     {
       id: "custom-ai",
-      title: "CUSTOM AI SOLUTIONS",
-      description: "If your problem doesn't fit a category, we'll build around it.",
-      tag: "FULL SPECTRUM",
+      title: "Custom AI Solutions",
+      code: "CAPABILITY / 07",
+      description: "If your operational challenge doesn't fit a standard category, we build around it.",
+      features: ["Unstructured document parsing", "Custom domain algorithms"],
+      icon: <Sparkles className="w-5 h-5 text-[#FF4B2B]" />,
+      colSpan: "lg:col-span-4",
       accent: "#FF4B2B",
-      icon: <Sparkles className="w-5 h-5 text-[#111111]" />,
-      colSpan: "lg:col-span-1",
-      features: ["Discovery-first engineering", "Unstructured data solvers", "Domain-specific solutions"],
     },
   ];
 
   return (
     <section
       id="services"
-      className="relative py-24 sm:py-32 bg-[#090909] bg-grid-dark text-[#F7F2E8] border-b-2 border-[#1E1E1E]"
+      className="relative py-28 sm:py-36 bg-cool-canvas bg-system-map-light text-[#121316] border-b border-black/[0.08]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-[#141414] border-2 border-[#262626] shadow-[3px_3px_0px_#1E1E1E]">
-            <span className="w-2 h-2 bg-[#20C8E8]" />
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#E0DCD3]">
-              WHAT WE BUILD
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
+            <span>WHAT WE BUILD</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#F7F2E8] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Whatever the problem,
@@ -109,88 +123,65 @@ export function ServicesGrid() {
             <span className="text-[#20C8E8]">let&apos;s see what AI can do.</span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-[#B3AEA3] font-sans leading-relaxed">
+          <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
             Stavan creates custom solutions around your business — not the other
             way around.
           </p>
         </div>
 
-        {/* Asymmetrical Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Asymmetrical Bento Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {services.map((svc) => (
             <div
               key={svc.id}
-              className={`group relative flex flex-col justify-between bg-[#121212] border-2 border-[#242424] p-6 sm:p-7 transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:border-[#F7F2E8]/40 ${
-                svc.colSpan
-              }`}
-              style={{
-                boxShadow: "5px 5px 0px #1E1E1E",
-              }}
+              className={`studio-card-light rounded-2xl p-7 flex flex-col justify-between group ${svc.colSpan}`}
             >
-              {/* Top Accent Strip */}
-              <div
-                className="absolute top-0 left-0 right-0 h-1.5"
-                style={{ backgroundColor: svc.accent }}
-              />
-
               <div>
-                {/* Header: Tag + Icon */}
-                <div className="flex items-center justify-between mb-6 mt-1">
-                  <span
-                    className="px-2 py-0.5 text-[10px] font-mono font-bold tracking-widest uppercase border border-black shadow-[1px_1px_0px_#000]"
-                    style={{
-                      backgroundColor: svc.accent,
-                      color: "#111111",
-                    }}
-                  >
-                    {svc.tag}
+                <div className="flex items-center justify-between mb-5">
+                  <span className="text-[11px] font-mono tracking-wider text-[#888C99] uppercase">
+                    {svc.code}
                   </span>
-
                   <div
-                    className="w-9 h-9 flex items-center justify-center border border-black shadow-[2px_2px_0px_#000]"
-                    style={{ backgroundColor: svc.accent }}
+                    className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    style={{
+                      backgroundColor: `${svc.accent}14`,
+                      border: `1px solid ${svc.accent}30`,
+                    }}
                   >
                     {svc.icon}
                   </div>
                 </div>
 
-                {/* Service Name */}
-                <h3 className="font-mono text-lg sm:text-xl font-bold tracking-tight text-[#F7F2E8] mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#121316] mb-2 font-sans">
                   {svc.title}
                 </h3>
 
-                {/* Service Description */}
-                <p className="text-sm text-[#A8A49B] leading-relaxed mb-6 font-sans">
+                <p className="text-sm text-[#575A65] font-sans leading-relaxed mb-6">
                   {svc.description}
                 </p>
 
-                {/* Feature bullets */}
                 <div className="space-y-2 mb-6">
-                  {svc.features.map((f, i) => (
+                  {svc.features.map((feat, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 text-xs font-mono text-[#8E8A82]"
+                      className="flex items-center gap-2 text-xs font-mono text-[#6E7280]"
                     >
-                      <span
-                        className="w-1.5 h-1.5"
-                        style={{ backgroundColor: svc.accent }}
-                      />
-                      <span>{f}</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
+                      <span>{feat}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Action Link: Pre-filled WhatsApp discussion */}
-              <div className="pt-4 border-t border-[#1F1F1F]">
+              <div className="pt-4 border-t border-black/[0.06]">
                 <a
                   href={getWhatsAppUrlForService(svc.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#F7F2E8] hover:text-[#FF4B2B] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#121316] group-hover:text-[#FF4B2B] transition-colors"
                 >
-                  <span>Explore this solution</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <span>Discuss this solution</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </div>
             </div>

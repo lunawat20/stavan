@@ -18,7 +18,7 @@ export function WhatsAppButton() {
         rel="noopener noreferrer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 bg-[#111111] text-[#FAF7EE] border-2 border-[#FAF7EE] shadow-[4px_4px_0px_#25D366] hover:shadow-[2px_2px_0px_#25D366] hover:translate-x-[2px] hover:translate-y-[2px] transition-all select-none"
+        className="flex items-center gap-2.5 px-4 py-3 bg-[#14161C] text-[#F7F6F2] border border-white/15 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-[#25D366]/50 hover:bg-[#1A1D25] hover:-translate-y-0.5 transition-all select-none"
         aria-label="Chat with Stavan on WhatsApp"
       >
         {/* Pulsing online status indicator */}
@@ -31,7 +31,7 @@ export function WhatsAppButton() {
         <MessageSquare className="w-4 h-4 text-[#25D366]" />
 
         {/* Label */}
-        <span className="font-mono text-xs font-bold uppercase tracking-wider hidden sm:inline-block">
+        <span className="font-mono text-xs font-semibold uppercase tracking-wider hidden sm:inline-block">
           Chat with Stavan
         </span>
 

@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --cream-bg: #F4EFDF;
-  --cream-card: #FAF7EE;
-  --dark-bg: #090909;
-  --dark-card: #131313;
-  --text-ink: #111111;
-  --text-light: #F7F2E8;
-  --text-muted-dark: #8E8A82;
-  --text-muted-light: #66635C;
+  --bg-warm-white: #FAF8F3;
+  --bg-cool-gray: #EFF1F4;
+  --bg-dark-charcoal: #0D0E12;
+  --bg-charcoal-card: #14161C;
+  --bg-charcoal-card-hover: #1A1D24;
+  
+  --text-charcoal-primary: #121316;
+  --text-charcoal-secondary: #575A65;
+  --text-charcoal-muted: #888C99;
+  
+  --text-dark-primary: #F7F6F2;
+  --text-dark-secondary: #A6A9B6;
+  --text-dark-muted: #6C7080;
+  
   --accent-orange: #FF4B2B;
   --accent-cyan: #20C8E8;
   --accent-lime: #B7FF2A;
@@ -25,130 +31,108 @@ html {
 }
 
 body {
-  background-color: var(--dark-bg);
-  color: var(--text-light);
+  background-color: var(--bg-dark-charcoal);
+  color: var(--text-dark-primary);
   font-family: var(--font-sans);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Studio Architectural Grid Backgrounds */
-.bg-grid-dark {
-  background-image: linear-gradient(to right, rgba(247, 242, 232, 0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(247, 242, 232, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Business System Map: Technical Coordinate Grids (Large 120px Spacing) */
+.bg-system-map-dark {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 1px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 120px 120px;
+  background-position: 0 0, 0 0, 0 0;
 }
 
-.bg-grid-dark-dense {
-  background-image: linear-gradient(to right, rgba(247, 242, 232, 0.07) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(247, 242, 232, 0.07) 1px, transparent 1px);
-  background-size: 20px 20px;
+.bg-system-map-light {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(18, 19, 22, 0.14) 1px, transparent 0),
+    linear-gradient(to right, rgba(18, 19, 22, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 19, 22, 0.035) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 120px 120px;
+  background-position: 0 0, 0 0, 0 0;
 }
 
-.bg-grid-cream {
-  background-image: linear-gradient(to right, rgba(17, 17, 17, 0.06) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Section Background Systems */
+.bg-warm-canvas {
+  background-color: var(--bg-warm-white);
 }
 
-.bg-dots-cream {
-  background-image: radial-gradient(rgba(17, 17, 17, 0.12) 1px, transparent 1px);
-  background-size: 24px 24px;
+.bg-cool-canvas {
+  background-color: var(--bg-cool-gray);
 }
 
-/* Brutalist Hard Offset Shadows */
-.shadow-brutal-ink {
-  box-shadow: 4px 4px 0px #111111;
+.bg-dark-canvas {
+  background-color: var(--bg-dark-charcoal);
 }
 
-.shadow-brutal-ink-lg {
-  box-shadow: 6px 6px 0px #111111;
+.bg-warm-gradient {
+  background: linear-gradient(180deg, #FAF8F3 0%, #F3EDE2 50%, #FAF8F3 100%);
 }
 
-.shadow-brutal-ink-xl {
-  box-shadow: 8px 8px 0px #111111;
+.bg-cool-gradient {
+  background: linear-gradient(180deg, #EFF1F4 0%, #E6EBF2 100%);
 }
 
-.shadow-brutal-light {
-  box-shadow: 4px 4px 0px #F7F2E8;
+/* Refined Studio Card Shadows & Transitions */
+.studio-card-light {
+  background: #FFFFFF;
+  border: 1px solid rgba(18, 19, 22, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(18, 19, 22, 0.04), 0 1px 3px 0 rgba(18, 19, 22, 0.03);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
 }
 
-.shadow-brutal-orange {
-  box-shadow: 4px 4px 0px #FF4B2B;
+.studio-card-light:hover {
+  transform: translateY(-3px);
+  border-color: rgba(18, 19, 22, 0.16);
+  box-shadow: 0 16px 36px -6px rgba(18, 19, 22, 0.08), 0 4px 12px -2px rgba(18, 19, 22, 0.04);
 }
 
-.shadow-brutal-cyan {
-  box-shadow: 4px 4px 0px #20C8E8;
+.studio-card-dark {
+  background: var(--bg-charcoal-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
 }
 
-.shadow-brutal-lime {
-  box-shadow: 4px 4px 0px #B7FF2A;
+.studio-card-dark:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
 }
 
-.shadow-brutal-pink {
-  box-shadow: 4px 4px 0px #FF4C9A;
-}
-
-.shadow-brutal-yellow {
-  box-shadow: 4px 4px 0px #FFD43B;
-}
-
-/* Tactile Click & Hover Micro-physics */
-.brutal-card-hover {
-  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.brutal-card-hover:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0px #111111;
-}
-
-.brutal-card-hover-dark {
-  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease;
-}
-
-.brutal-card-hover-dark:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0px rgba(247, 242, 232, 0.25);
-}
-
-.brutal-btn-active:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px currentColor;
-}
-
-/* Pulse animation for node flow signals */
-@keyframes signalFlow {
-  0% {
-    stroke-dashoffset: 24;
+/* Flowing Conduit Circuit Lines */
+@keyframes conduitFlow {
+  from {
+    stroke-dashoffset: 40;
   }
-  100% {
+  to {
     stroke-dashoffset: 0;
   }
 }
 
-.animate-signal-flow {
+.animate-conduit {
   stroke-dasharray: 6 6;
-  animation: signalFlow 1.2s linear infinite;
+  animation: conduitFlow 1.6s linear infinite;
 }
 
-/* Subtle pulse for active status indicators */
-@keyframes pingSlow {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.8;
+/* Pulsing Status Core */
+@keyframes statusBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.95);
-    opacity: 0.8;
+    opacity: 0.4;
+    transform: scale(0.85);
   }
 }
 
-.animate-status-pulse {
-  animation: pingSlow 2s ease-in-out infinite;
+.animate-beacon {
+  animation: statusBeacon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

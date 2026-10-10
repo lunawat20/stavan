@@ -14,35 +14,35 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#090909] text-[#F7F2E8]">
+    <main className="relative min-h-screen bg-dark-canvas text-[#F7F6F2]">
       {/* 1. Sticky Navigation */}
       <Navbar />
 
-      {/* 2. Hero Section with Living System Workflow */}
+      {/* 2. Hero: Dark Charcoal Canvas + Asymmetric Living Business Automation Engine */}
       <Hero />
 
-      {/* 3. The Real Problem (Warm Cream Chapter) */}
+      {/* 3. Problem: Warm Off-White Canvas + Asymmetric Diagnostic Stack */}
       <ProblemSection />
 
-      {/* 4. What We Can Build (Services Grid) */}
+      {/* 4. What We Build: Cool-Gray Canvas + Asymmetric Bento Grid */}
       <ServicesGrid />
 
-      {/* 5. How It Works (4-Phase Stepped Progression) */}
+      {/* 5. How It Works: Dark Charcoal Canvas + Live Status Telemetry Pipeline */}
       <ProcessSection />
 
-      {/* 6. Automation Examples (Living Demonstration on Warm Cream) */}
+      {/* 6. Automation Examples: Soft Warm Gradient Canvas + Before vs. After System Simulation */}
       <AutomationExamples />
 
-      {/* 7. Why Stavan (Agency Principles) */}
+      {/* 7. Why Stavan: Cool-Gray Canvas + Studio Operating Principles */}
       <WhyStavan />
 
-      {/* 8. Complimentary Consultation (High-Converting Conversion Core) */}
+      {/* 8. Complimentary Consultation: Dark Charcoal Canvas + Direct Diagnostic Pathway */}
       <ConsultationSection />
 
-      {/* 9. FAQ (Questions, Answered on Warm Cream) */}
+      {/* 9. FAQ: Warm Off-White Canvas + Refined Studio Accordions */}
       <FAQ />
 
-      {/* 10. Final CTA (Massive Editorial Call to Action) */}
+      {/* 10. Final CTA: Dark Charcoal Canvas + Signature Motif & Conversion Engine */}
       <FinalCTA />
 
       {/* 11. Studio Footer */}

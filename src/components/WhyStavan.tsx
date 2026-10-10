@@ -5,59 +5,61 @@ export function WhyStavan() {
   const principles = [
     {
       num: "01",
-      title: "BUSINESS FIRST",
+      code: "PRINCIPLE / 01",
+      title: "Business First",
       copy: "We start with the problem, not the technology.",
       detail:
         "We never build something just because it's technically flashy. If a simple rule or clean automation solves it better than complex AI, that's what we deploy.",
       accent: "#FF4B2B",
-      icon: <Target className="w-5 h-5 text-[#111111]" />,
+      icon: <Target className="w-5 h-5 text-[#FF4B2B]" />,
     },
     {
       num: "02",
-      title: "CUSTOM BY DEFAULT",
+      code: "PRINCIPLE / 02",
+      title: "Custom by Default",
       copy: "Your business is unique. Your solution should be too.",
       detail:
         "Your customers, your tools, and your internal habits have specific quirks. We engineer solutions that adapt to your reality rather than forcing rigid templates on you.",
       accent: "#20C8E8",
-      icon: <Fingerprint className="w-5 h-5 text-[#111111]" />,
+      icon: <Fingerprint className="w-5 h-5 text-[#20C8E8]" />,
     },
     {
       num: "03",
-      title: "PRACTICAL AI",
+      code: "PRINCIPLE / 03",
+      title: "Practical AI",
       copy: "We focus on useful systems, not AI for the sake of AI.",
       detail:
         "No hollow buzzwords or unpredictable gimmicks. We measure success by hours saved, inquiries captured, and operational calm restored.",
       accent: "#B7FF2A",
-      icon: <Wrench className="w-5 h-5 text-[#111111]" />,
+      icon: <Wrench className="w-5 h-5 text-[#B7FF2A]" />,
     },
     {
       num: "04",
-      title: "HUMAN + AI",
+      code: "PRINCIPLE / 04",
+      title: "Human + AI",
       copy: "The goal is to make your business better, not simply replace people.",
       detail:
         "We remove the monotonous, soul-draining data transfer and busywork so your team can focus on what humans do best: client relationships and strategy.",
       accent: "#FFD43B",
-      icon: <HeartHandshake className="w-5 h-5 text-[#111111]" />,
+      icon: <HeartHandshake className="w-5 h-5 text-[#FFD43B]" />,
     },
   ];
 
   return (
     <section
       id="why-stavan"
-      className="relative py-24 sm:py-32 bg-[#090909] bg-grid-dark text-[#F7F2E8] border-b-2 border-[#1E1E1E]"
+      className="relative py-28 sm:py-36 bg-cool-canvas bg-system-map-light text-[#121316] border-b border-black/[0.08]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-[#141414] border-2 border-[#262626] shadow-[3px_3px_0px_#1E1E1E]">
-            <span className="w-2 h-2 bg-[#FF4C9A]" />
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#E0DCD3]">
-              WHY STAVAN
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF4C9A]" />
+            <span>WHY STAVAN</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#F7F2E8] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             We don&apos;t automate for
@@ -65,53 +67,54 @@ export function WhyStavan() {
             <span className="text-[#FF4C9A]">the sake of automation.</span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-[#B3AEA3] font-sans leading-relaxed">
-            Our compass is utility, dependability, and long-term business
-            leverage.
+          <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
+            Our compass is utility, dependability, and measurable business leverage.
           </p>
         </div>
 
-        {/* Minimal Editorial Principles Grid */}
+        {/* 4 Studio Principle Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {principles.map((item) => (
             <div
               key={item.num}
-              className="relative p-7 sm:p-9 bg-[#121212] border-2 border-[#222222] transition-all duration-200 hover:border-[#F7F2E8]/40 hover:-translate-x-1 hover:-translate-y-1"
-              style={{
-                boxShadow: "5px 5px 0px #1A1A1A",
-              }}
+              className="studio-card-light rounded-2xl p-7 sm:p-9 relative overflow-hidden group flex flex-col justify-between"
             >
-              {/* Left Accent Bar */}
+              {/* Subtle vertical indicator */}
               <div
-                className="absolute top-0 bottom-0 left-0 w-1.5"
+                className="absolute left-0 top-0 bottom-0 w-1.5 transition-all group-hover:w-2"
                 style={{ backgroundColor: item.accent }}
               />
 
-              <div className="flex items-start justify-between gap-4 mb-6">
-                <div>
-                  <span className="font-mono text-xs font-bold tracking-widest text-[#8E8A82] uppercase mb-1 block">
-                    PRINCIPLE {item.num}
-                  </span>
-                  <h3 className="font-mono text-xl sm:text-2xl font-bold tracking-tight text-[#FAF7EE] uppercase">
-                    {item.title}
-                  </h3>
+              <div className="pl-3 sm:pl-4">
+                <div className="flex items-start justify-between gap-4 mb-6">
+                  <div>
+                    <span className="font-mono text-xs font-semibold tracking-wider text-[#888C99] uppercase mb-1 block">
+                      {item.code}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#121316] font-sans">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{
+                      backgroundColor: `${item.accent}14`,
+                      border: `1px solid ${item.accent}30`,
+                    }}
+                  >
+                    {item.icon}
+                  </div>
                 </div>
 
-                <div
-                  className="w-10 h-10 flex-shrink-0 flex items-center justify-center border border-black shadow-[2px_2px_0px_#000]"
-                  style={{ backgroundColor: item.accent }}
-                >
-                  {item.icon}
+                <div className="text-base sm:text-lg font-bold text-[#121316] mb-3 leading-snug font-sans">
+                  {item.copy}
                 </div>
-              </div>
 
-              <div className="text-base sm:text-lg font-bold text-[#F7F2E8] mb-3 leading-snug">
-                {item.copy}
+                <p className="text-sm text-[#575A65] leading-relaxed font-sans">
+                  {item.detail}
+                </p>
               </div>
-
-              <p className="text-sm text-[#8E8A82] leading-relaxed font-sans">
-                {item.detail}
-              </p>
             </div>
           ))}
         </div>
