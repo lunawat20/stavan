@@ -37,9 +37,9 @@ export function ServicesGrid() {
         "Automated booking & quotation",
         "Interactive service catalogs",
       ],
-      icon: <MessageCircle className="w-5 h-5 text-[#20C8E8]" />,
+      icon: <MessageCircle className="w-5 h-5 text-[#FF542F]" />,
       colSpan: "lg:col-span-4",
-      accent: "#20C8E8",
+      accent: "#FF542F",
     },
     {
       id: "crm-auto",
@@ -51,9 +51,9 @@ export function ServicesGrid() {
         "Auto stage progression",
         "Pipeline alerts & sync",
       ],
-      icon: <Users className="w-5 h-5 text-[#20C8E8]" />,
+      icon: <Users className="w-5 h-5 text-[#B6F23A]" />,
       colSpan: "lg:col-span-4",
-      accent: "#20C8E8",
+      accent: "#B6F23A",
     },
     {
       id: "workflow-auto",
@@ -75,9 +75,9 @@ export function ServicesGrid() {
       code: "CAPABILITY / 05",
       description: "Web experiences designed around intelligent, dynamic interactions.",
       features: ["Context-aware user paths", "Direct booking conversion"],
-      icon: <Globe className="w-5 h-5 text-[#20C8E8]" />,
+      icon: <Globe className="w-5 h-5 text-[#FFD447]" />,
       colSpan: "lg:col-span-4",
-      accent: "#20C8E8",
+      accent: "#FFD447",
     },
     {
       id: "custom-software",
@@ -85,9 +85,9 @@ export function ServicesGrid() {
       code: "CAPABILITY / 06",
       description: "When an off-the-shelf software tool isn't enough for your specific operational model.",
       features: ["Tailored staff dashboards", "Proprietary business portals"],
-      icon: <Code2 className="w-5 h-5 text-[#20C8E8]" />,
+      icon: <Code2 className="w-5 h-5 text-[#111111]" />,
       colSpan: "lg:col-span-4",
-      accent: "#20C8E8",
+      accent: "#111111",
     },
     {
       id: "custom-ai",
@@ -95,35 +95,35 @@ export function ServicesGrid() {
       code: "CAPABILITY / 07",
       description: "If your operational challenge doesn't fit a standard category, we build around it.",
       features: ["Unstructured document parsing", "Custom domain algorithms"],
-      icon: <Sparkles className="w-5 h-5 text-[#FF4B2B]" />,
+      icon: <Sparkles className="w-5 h-5 text-[#FF542F]" />,
       colSpan: "lg:col-span-4",
-      accent: "#FF4B2B",
+      accent: "#FF542F",
     },
   ];
 
   return (
     <section
       id="services"
-      className="relative py-28 sm:py-36 bg-cool-canvas bg-system-map-light text-[#121316] border-b border-black/[0.08]"
+      className="relative py-28 sm:py-36 bg-subtle-grey bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
             <span>WHAT WE BUILD</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Whatever the problem,
             <br />
-            <span className="text-[#20C8E8]">let&apos;s see what AI can do.</span>
+            <span className="text-[#FF542F]">let&apos;s see what AI can do.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
+          <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
             Stavan creates custom solutions around your business — not the other
             way around.
           </p>
@@ -134,11 +134,11 @@ export function ServicesGrid() {
           {services.map((svc) => (
             <div
               key={svc.id}
-              className={`studio-card-light rounded-2xl p-7 flex flex-col justify-between group ${svc.colSpan}`}
+              className={`card-studio-light rounded-2xl p-7 flex flex-col justify-between group ${svc.colSpan}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <span className="text-[11px] font-mono tracking-wider text-[#888C99] uppercase">
+                  <span className="text-[11px] font-mono tracking-wider text-[#777777] uppercase">
                     {svc.code}
                   </span>
                   <div
@@ -152,11 +152,11 @@ export function ServicesGrid() {
                   </div>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#121316] mb-2 font-sans">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#111111] mb-2 font-sans">
                   {svc.title}
                 </h3>
 
-                <p className="text-sm text-[#575A65] font-sans leading-relaxed mb-6">
+                <p className="text-sm text-[#555555] font-sans leading-relaxed mb-6">
                   {svc.description}
                 </p>
 
@@ -164,21 +164,24 @@ export function ServicesGrid() {
                   {svc.features.map((feat, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2 text-xs font-mono text-[#6E7280]"
+                      className="flex items-center gap-2 text-xs font-mono text-[#555555]"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: svc.accent }}
+                      />
                       <span>{feat}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-black/[0.06]">
+              <div className="pt-4 border-t border-[#EBE7DC]">
                 <a
                   href={getWhatsAppUrlForService(svc.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#121316] group-hover:text-[#FF4B2B] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-[#111111] group-hover:text-[#FF542F] transition-colors"
                 >
                   <span>Discuss this solution</span>
                   <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

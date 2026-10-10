@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090909",
+  themeColor: "#F7F4EC",
   width: "device-width",
   initialScale: 1,
 };
@@ -73,7 +73,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#090909] text-[#F7F2E8] selection:bg-[#FF4B2B] selection:text-white">
+      <body className="min-h-screen bg-[#F7F4EC] text-[#111111] selection:bg-[#FF542F] selection:text-white">
         {children}
       </body>
     </html>

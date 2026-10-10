@@ -10,14 +10,14 @@ interface StavanMotifProps {
 }
 
 export function StavanMotif({
-  theme = "dark",
+  theme = "light",
   size = "md",
   className = "",
   showLabels = false,
 }: StavanMotifProps) {
   const isDark = theme === "dark";
-  const strokeBase = isDark ? "rgba(255, 255, 255, 0.15)" : "rgba(18, 19, 22, 0.15)";
-  const strokeSubtle = isDark ? "rgba(255, 255, 255, 0.06)" : "rgba(18, 19, 22, 0.06)";
+  const strokeBase = isDark ? "rgba(247, 244, 236, 0.15)" : "#D8D5CC";
+  const strokeSubtle = isDark ? "rgba(247, 244, 236, 0.06)" : "rgba(17, 17, 17, 0.06)";
 
   const dimensions = {
     sm: { w: 180, h: 48 },
@@ -49,7 +49,7 @@ export function StavanMotif({
         {/* Animated conduit flowing curve */}
         <path
           d={`M 24 ${h / 2} C ${w * 0.3} ${h * 0.15}, ${w * 0.4} ${h * 0.85}, ${w / 2} ${h / 2} C ${w * 0.6} ${h * 0.15}, ${w * 0.7} ${h * 0.85}, ${w - 24} ${h / 2}`}
-          stroke="url(#stavanMotifGrad)"
+          stroke="url(#stavanMotifGradLight)"
           strokeWidth="2"
           strokeLinecap="round"
           className="animate-conduit"
@@ -57,16 +57,16 @@ export function StavanMotif({
 
         {/* Linear Gradient for flowing track */}
         <defs>
-          <linearGradient id="stavanMotifGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id="stavanMotifGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#20C8E8" />
-            <stop offset="50%" stopColor="#FF4B2B" />
-            <stop offset="100%" stopColor="#B7FF2A" />
+            <stop offset="50%" stopColor="#FF542F" />
+            <stop offset="100%" stopColor="#B6F23A" />
           </linearGradient>
         </defs>
 
         {/* 1. Node 1: Business Trigger */}
         <g transform={`translate(24, ${h / 2})`}>
-          <circle r="12" fill={isDark ? "#14161C" : "#FFFFFF"} stroke={strokeBase} strokeWidth="1.5" />
+          <circle r="12" fill={isDark ? "#181818" : "#FFFFFF"} stroke={strokeBase} strokeWidth="1.5" />
           <circle r="5" fill="#20C8E8" />
           <circle r="8" fill="none" stroke="#20C8E8" strokeWidth="1" opacity="0.4" className="animate-ping" />
         </g>
@@ -79,36 +79,36 @@ export function StavanMotif({
             width="24"
             height="24"
             rx="5"
-            fill={isDark ? "#14161C" : "#FFFFFF"}
+            fill={isDark ? "#181818" : "#FFFFFF"}
             stroke={strokeBase}
             strokeWidth="1.5"
           />
-          <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#FF4B2B" />
+          <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#FF542F" />
         </g>
 
         {/* 3. Node 3: Automated Action (End) */}
         <g transform={`translate(${w - 24}, ${h / 2})`}>
-          <circle r="12" fill={isDark ? "#14161C" : "#FFFFFF"} stroke={strokeBase} strokeWidth="1.5" />
-          <polygon points="0,-6 6,4 -6,4" fill="#B7FF2A" transform="rotate(90)" />
+          <circle r="12" fill={isDark ? "#181818" : "#FFFFFF"} stroke={strokeBase} strokeWidth="1.5" />
+          <polygon points="0,-6 6,4 -6,4" fill="#B6F23A" transform="rotate(90)" />
         </g>
       </svg>
 
       {showLabels && (
         <div
           className="w-full flex items-center justify-between text-[10px] font-mono tracking-widest uppercase mt-2 px-1"
-          style={{ color: isDark ? "#8E92A2" : "#575A65" }}
+          style={{ color: isDark ? "#A0A0A0" : "#555555" }}
         >
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
-            BUSINESS INPUT
+            INPUT
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-sm bg-[#FF4B2B]" />
-            INTELLIGENCE CORE
+            <span className="w-1.5 h-1.5 rounded-sm bg-[#FF542F]" />
+            INTELLIGENCE
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#B7FF2A]" />
-            SYSTEM ACTION
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B6F23A]" />
+            ACTION
           </span>
         </div>
       )}

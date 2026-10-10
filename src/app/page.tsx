@@ -14,38 +14,38 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-dark-canvas text-[#F7F6F2]">
-      {/* 1. Sticky Navigation */}
+    <main className="relative min-h-screen bg-ivory-primary text-[#111111]">
+      {/* 1. Sticky Light Navigation (Warm Ivory Translucent) */}
       <Navbar />
 
-      {/* 2. Hero: Dark Charcoal Canvas + Asymmetric Living Business Automation Engine */}
+      {/* 2. Hero: Warm Ivory Canvas (#F7F4EC) + Floating Living Automation Engine */}
       <Hero />
 
-      {/* 3. Problem: Warm Off-White Canvas + Asymmetric Diagnostic Stack */}
+      {/* 3. Problem: Soft White Canvas (#FBFAF6) + Asymmetric Diagnostic Stack */}
       <ProblemSection />
 
-      {/* 4. What We Build: Cool-Gray Canvas + Asymmetric Bento Grid */}
+      {/* 4. What We Build: Subtle Cool-Grey Canvas (#F1F3F2) + Asymmetric Bento Grid */}
       <ServicesGrid />
 
-      {/* 5. How It Works: Dark Charcoal Canvas + Live Status Telemetry Pipeline */}
+      {/* 5. How It Works: Warm Ivory Canvas (#F7F4EC) + Live Status Telemetry Pipeline */}
       <ProcessSection />
 
-      {/* 6. Automation Examples: Soft Warm Gradient Canvas + Before vs. After System Simulation */}
+      {/* 6. Automation Examples: Light Warm Gradient Canvas + Before vs. After System Simulation */}
       <AutomationExamples />
 
-      {/* 7. Why Stavan: Cool-Gray Canvas + Studio Operating Principles */}
+      {/* 7. Why Stavan: Soft Off-White Canvas (#FBFAF6) + Studio Operating Principles */}
       <WhyStavan />
 
-      {/* 8. Complimentary Consultation: Dark Charcoal Canvas + Direct Diagnostic Pathway */}
+      {/* 8. Complimentary Consultation: Dark Charcoal Contrast Canvas (#111111) */}
       <ConsultationSection />
 
-      {/* 9. FAQ: Warm Off-White Canvas + Refined Studio Accordions */}
+      {/* 9. FAQ: Warm Ivory Canvas (#F7F4EC) + Refined Physical Studio Accordions */}
       <FAQ />
 
-      {/* 10. Final CTA: Dark Charcoal Canvas + Signature Motif & Conversion Engine */}
+      {/* 10. Final CTA: Dark Charcoal Contrast Canvas (#111111) */}
       <FinalCTA />
 
-      {/* 11. Studio Footer */}
+      {/* 11. Studio Footer: Dark Charcoal (#111111) */}
       <Footer />
 
       {/* 12. Floating WhatsApp Indicator */}

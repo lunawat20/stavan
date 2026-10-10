@@ -1,25 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --bg-warm-white: #FAF8F3;
-  --bg-cool-gray: #EFF1F4;
-  --bg-dark-charcoal: #0D0E12;
-  --bg-charcoal-card: #14161C;
-  --bg-charcoal-card-hover: #1A1D24;
+  /* Elegant Light-First Palette */
+  --bg-primary-ivory: #F7F4EC;
+  --bg-soft-white: #FBFAF6;
+  --bg-cool-grey: #F1F3F2;
+  --bg-warm-tint: #F1EEE5;
+  --bg-warm-border: #D8D5CC;
   
-  --text-charcoal-primary: #121316;
-  --text-charcoal-secondary: #575A65;
-  --text-charcoal-muted: #888C99;
+  --bg-dark-charcoal: #111111;
+  --bg-charcoal-card: #181818;
   
-  --text-dark-primary: #F7F6F2;
-  --text-dark-secondary: #A6A9B6;
-  --text-dark-muted: #6C7080;
+  --text-main: #111111;
+  --text-secondary: #555555;
+  --text-muted: #777777;
   
-  --accent-orange: #FF4B2B;
+  --text-light: #F7F4EC;
+  --text-light-secondary: #A0A0A0;
+  
+  /* Stavan Accent Tokens */
+  --accent-orange: #FF542F;
   --accent-cyan: #20C8E8;
-  --accent-lime: #B7FF2A;
-  --accent-pink: #FF4C9A;
-  --accent-yellow: #FFD43B;
+  --accent-lime: #B6F23A;
+  --accent-pink: #FF4D96;
+  --accent-yellow: #FFD447;
   
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -27,86 +31,87 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark light;
+  color-scheme: light;
 }
 
 body {
-  background-color: var(--bg-dark-charcoal);
-  color: var(--text-dark-primary);
+  background-color: var(--bg-primary-ivory);
+  color: var(--text-main);
   font-family: var(--font-sans);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Business System Map: Technical Coordinate Grids (Large 120px Spacing) */
-.bg-system-map-dark {
+/* Subtle Technical Workflow Map on Light Background */
+.bg-workflow-light {
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 1px, transparent 0),
-    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 120px 120px, 120px 120px, 120px 120px;
+    radial-gradient(circle at 1px 1px, rgba(17, 17, 17, 0.08) 1px, transparent 0),
+    linear-gradient(to right, rgba(17, 17, 17, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.02) 1px, transparent 1px);
+  background-size: 140px 140px, 140px 140px, 140px 140px;
   background-position: 0 0, 0 0, 0 0;
 }
 
-.bg-system-map-light {
+/* Technical Pattern on Dark Contrast Sections */
+.bg-workflow-dark {
   background-image: 
-    radial-gradient(circle at 1px 1px, rgba(18, 19, 22, 0.14) 1px, transparent 0),
-    linear-gradient(to right, rgba(18, 19, 22, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(18, 19, 22, 0.035) 1px, transparent 1px);
-  background-size: 120px 120px, 120px 120px, 120px 120px;
+    radial-gradient(circle at 1px 1px, rgba(247, 244, 236, 0.1) 1px, transparent 0),
+    linear-gradient(to right, rgba(247, 244, 236, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(247, 244, 236, 0.025) 1px, transparent 1px);
+  background-size: 140px 140px, 140px 140px, 140px 140px;
   background-position: 0 0, 0 0, 0 0;
 }
 
-/* Section Background Systems */
-.bg-warm-canvas {
-  background-color: var(--bg-warm-white);
+/* Section Background Variations */
+.bg-ivory-primary {
+  background-color: #F7F4EC;
 }
 
-.bg-cool-canvas {
-  background-color: var(--bg-cool-gray);
+.bg-soft-white {
+  background-color: #FBFAF6;
 }
 
-.bg-dark-canvas {
-  background-color: var(--bg-dark-charcoal);
+.bg-subtle-grey {
+  background-color: #F1F3F2;
 }
 
-.bg-warm-gradient {
-  background: linear-gradient(180deg, #FAF8F3 0%, #F3EDE2 50%, #FAF8F3 100%);
+.bg-light-warm-grad {
+  background: linear-gradient(180deg, #F7F4EC 0%, #EFEBE0 50%, #F7F4EC 100%);
 }
 
-.bg-cool-gradient {
-  background: linear-gradient(180deg, #EFF1F4 0%, #E6EBF2 100%);
+.bg-charcoal-dark {
+  background-color: #111111;
 }
 
-/* Refined Studio Card Shadows & Transitions */
-.studio-card-light {
-  background: #FFFFFF;
-  border: 1px solid rgba(18, 19, 22, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(18, 19, 22, 0.04), 0 1px 3px 0 rgba(18, 19, 22, 0.03);
+/* Elegant Physical Object Cards */
+.card-studio-light {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D5CC;
+  box-shadow: 0 2px 10px -2px rgba(17, 17, 17, 0.03), 0 1px 2px 0 rgba(17, 17, 17, 0.02);
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
 }
 
-.studio-card-light:hover {
-  transform: translateY(-3px);
-  border-color: rgba(18, 19, 22, 0.16);
-  box-shadow: 0 16px 36px -6px rgba(18, 19, 22, 0.08), 0 4px 12px -2px rgba(18, 19, 22, 0.04);
+.card-studio-light:hover {
+  transform: translateY(-2px);
+  border-color: #B8B4A7;
+  box-shadow: 0 12px 28px -4px rgba(17, 17, 17, 0.06), 0 2px 6px -1px rgba(17, 17, 17, 0.03);
 }
 
-.studio-card-dark {
-  background: var(--bg-charcoal-card);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.card-studio-dark {
+  background-color: #181818;
+  border: 1px solid rgba(247, 244, 236, 0.1);
   box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
 }
 
-.studio-card-dark:hover {
-  transform: translateY(-3px);
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+.card-studio-dark:hover {
+  transform: translateY(-2px);
+  border-color: rgba(247, 244, 236, 0.2);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.6);
 }
 
-/* Flowing Conduit Circuit Lines */
+/* Subtle Conduit Flow */
 @keyframes conduitFlow {
   from {
     stroke-dashoffset: 40;
@@ -118,21 +123,5 @@ body {
 
 .animate-conduit {
   stroke-dasharray: 6 6;
-  animation: conduitFlow 1.6s linear infinite;
-}
-
-/* Pulsing Status Core */
-@keyframes statusBeacon {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(0.85);
-  }
-}
-
-.animate-beacon {
-  animation: statusBeacon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: conduitFlow 1.8s linear infinite;
 }

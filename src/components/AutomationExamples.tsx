@@ -11,7 +11,6 @@ import {
   Users,
 } from "lucide-react";
 import { WHATSAPP_URL } from "@/lib/constants";
-import { StavanMotif } from "./StavanMotif";
 
 export function AutomationExamples() {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,7 +22,7 @@ export function AutomationExamples() {
       number: "SYSTEM / 01",
       title: "Lead Management Engine",
       icon: <Users className="w-4 h-4" />,
-      accent: "#FF4B2B",
+      accent: "#FF542F",
       tagline: "From cold inquiry to CRM-synced appointment in under 60 seconds",
       manualPain: "Hours spent manually copying contact details from WhatsApp to spreadsheets while leads go cold.",
       automatedGain: "Instant intelligent qualification, calendar booking, CRM record creation, and founder alert.",
@@ -57,7 +56,7 @@ export function AutomationExamples() {
       number: "SYSTEM / 03",
       title: "Internal Operations Pipeline",
       icon: <FileText className="w-4 h-4" />,
-      accent: "#B7FF2A",
+      accent: "#B6F23A",
       tagline: "Transforming messy inbox attachments into synchronized accounting records",
       manualPain: "Manually opening invoices, re-typing line items into software, and writing weekly summaries.",
       automatedGain: "Automated document ingestion, data extraction, ledger update, and scheduled management report.",
@@ -85,26 +84,26 @@ export function AutomationExamples() {
   return (
     <section
       id="automation-examples"
-      className="relative py-28 sm:py-36 bg-warm-gradient bg-system-map-light text-[#121316] border-b border-black/[0.08]"
+      className="relative py-28 sm:py-36 bg-light-warm-grad bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B2B]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF542F]" />
             <span>IMAGINE THE POSSIBILITY</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Imagine your business
             <br />
-            <span className="text-[#FF4B2B]">without the busywork.</span>
+            <span className="text-[#FF542F]">without the busywork.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
+          <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
             Real architectural blueprints of how repetitive operational drag turns
             into dependable, automated pipelines.
           </p>
@@ -121,13 +120,13 @@ export function AutomationExamples() {
                 onClick={() => setActiveTab(idx)}
                 className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-mono text-xs sm:text-sm font-semibold tracking-wide border transition-all ${
                   isSelected
-                    ? "bg-[#121316] text-[#FAF8F3] border-[#121316] shadow-[0_8px_20px_rgba(18,19,22,0.15)]"
-                    : "bg-white text-[#575A65] border-black/10 hover:border-black/20 hover:text-[#121316]"
+                    ? "bg-[#111111] text-[#F7F4EC] border-[#111111] shadow-[0_6px_20px_rgba(17,17,17,0.12)]"
+                    : "bg-white text-[#555555] border-[#D8D5CC] hover:border-[#B8B4A7] hover:text-[#111111]"
                 }`}
               >
                 <span
                   className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: isSelected ? ex.accent : "#C2C6D2" }}
+                  style={{ backgroundColor: isSelected ? ex.accent : "#D8D5CC" }}
                 />
                 <span>{ex.title}</span>
               </button>
@@ -136,31 +135,31 @@ export function AutomationExamples() {
         </div>
 
         {/* Showcase Container */}
-        <div className="studio-card-light rounded-3xl p-7 sm:p-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-black/[0.08]">
+        <div className="card-studio-light rounded-3xl p-7 sm:p-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-[#EBE7DC]">
             <div>
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF4B2B] uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF542F] uppercase tracking-wider mb-1">
                 <span>{currentExample.number}</span>
                 <span>•</span>
                 <span>INTERACTIVE SIMULATION</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#121316] font-sans">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-sans">
                 {currentExample.title}
               </h3>
-              <p className="text-sm sm:text-base text-[#575A65] font-sans mt-1">
+              <p className="text-sm sm:text-base text-[#555555] font-sans mt-1">
                 {currentExample.tagline}
               </p>
             </div>
 
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#20C8E8] animate-ping" />
-              <span className="font-mono text-xs text-[#575A65] uppercase tracking-wider">
+              <span className="font-mono text-xs text-[#555555] uppercase tracking-wider">
                 PIPELINE STATUS: SYNCHRONIZED
               </span>
             </div>
           </div>
 
-          {/* Stepped Process Stream */}
+          {/* Stepped Process Stream with White Cards */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3.5 mb-10">
             {currentExample.nodes.map((node, nIdx) => {
               const isCurrent = nIdx === activeNode;
@@ -172,33 +171,33 @@ export function AutomationExamples() {
                   onClick={() => setActiveNode(nIdx)}
                   className={`cursor-pointer p-4 rounded-xl border transition-all ${
                     isCurrent
-                      ? "bg-white border-[#121316] shadow-[0_8px_20px_rgba(0,0,0,0.06)] -translate-y-1"
+                      ? "bg-[#FBFAF6] border-[#111111] shadow-[0_6px_16px_rgba(17,17,17,0.06)] -translate-y-1"
                       : isPassed
-                      ? "bg-[#F7F5EE] border-black/[0.06]"
-                      : "bg-[#FAFAF7] border-black/[0.04] opacity-80 hover:opacity-100"
+                      ? "bg-[#F7F4EC] border-[#E5E1D6]"
+                      : "bg-[#FFFFFF] border-[#EBE7DC] opacity-80 hover:opacity-100"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] font-bold tracking-wider text-[#888C99]">
+                    <span className="font-mono text-[10px] font-bold tracking-wider text-[#777777]">
                       {node.stage}
                     </span>
                     {isPassed ? (
-                      <CheckCircle className="w-3.5 h-3.5 text-[#121316]" />
+                      <CheckCircle className="w-3.5 h-3.5 text-[#111111]" />
                     ) : (
                       <span
                         className="w-1.5 h-1.5 rounded-full"
                         style={{
-                          backgroundColor: isCurrent ? currentExample.accent : "#D0D3DC",
+                          backgroundColor: isCurrent ? currentExample.accent : "#D8D5CC",
                         }}
                       />
                     )}
                   </div>
 
-                  <div className="font-sans text-xs sm:text-sm font-bold text-[#121316] mb-1">
+                  <div className="font-sans text-xs sm:text-sm font-bold text-[#111111] mb-1">
                     {node.title}
                   </div>
 
-                  <div className="text-[11px] text-[#575A65] font-sans leading-snug">
+                  <div className="text-[11px] text-[#555555] font-sans leading-snug">
                     {node.desc}
                   </div>
                 </div>
@@ -207,23 +206,23 @@ export function AutomationExamples() {
           </div>
 
           {/* Before vs After Impact Box */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-6 border-t border-black/[0.08]">
-            <div className="p-5 rounded-2xl bg-[#F4EFE6] border border-black/[0.06]">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF4B2B] uppercase tracking-wider mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-6 border-t border-[#EBE7DC]">
+            <div className="p-5 rounded-2xl bg-[#F7F4EC] border border-[#E5E1D6]">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF542F] uppercase tracking-wider mb-2">
                 <Clock className="w-4 h-4" />
                 <span>BEFORE (MANUAL DRAG)</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#575A65] font-sans leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#555555] font-sans leading-relaxed">
                 {currentExample.manualPain}
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white border border-black/[0.1] shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#121316] uppercase tracking-wider mb-2">
+            <div className="p-5 rounded-2xl bg-white border border-[#D8D5CC] shadow-[0_4px_16px_rgba(17,17,17,0.03)]">
+              <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#111111] uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4 text-[#20C8E8]" />
                 <span>AFTER (STAVAN SYSTEM)</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#121316] font-sans font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#111111] font-sans font-medium leading-relaxed">
                 {currentExample.automatedGain}
               </p>
             </div>
@@ -231,17 +230,17 @@ export function AutomationExamples() {
 
           {/* Action Row */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-xs font-mono text-[#575A65]">
+            <div className="text-xs font-mono text-[#555555]">
               Interested in a similar automated pipeline for your workflow?
             </div>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#121316] hover:bg-[#202228] text-[#FAF8F3] font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111111] hover:bg-[#252525] text-[#F7F4EC] font-mono text-xs font-bold uppercase tracking-wider rounded-xl transition-all"
             >
               <span>Discuss this setup with Stavan</span>
-              <ArrowRight className="w-4 h-4 text-[#FF4B2B]" />
+              <ArrowRight className="w-4 h-4 text-[#FF542F]" />
             </a>
           </div>
         </div>

@@ -53,29 +53,29 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="relative py-28 sm:py-36 bg-warm-canvas bg-system-map-light text-[#121316] border-b border-black/[0.08]"
+      className="relative py-28 sm:py-36 bg-ivory-primary bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65] mb-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555] mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#20C8E8]" />
             <span>FAQ</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] mb-6 leading-[1.08]"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111111] mb-6 leading-[1.08]"
             style={{ letterSpacing: "-0.03em" }}
           >
             Questions, answered.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#575A65] font-sans">
+          <p className="text-base sm:text-lg text-[#555555] font-sans">
             Clear, honest answers about how we partner with business owners.
           </p>
         </div>
 
-        {/* Accordion Stack with Refined Studio Cards */}
+        {/* Accordion Stack on Warm Ivory Canvas */}
         <div className="space-y-3.5">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -83,7 +83,7 @@ export function FAQ() {
             return (
               <div
                 key={idx}
-                className="studio-card-light rounded-2xl overflow-hidden transition-all"
+                className="card-studio-light rounded-2xl overflow-hidden transition-all"
               >
                 <button
                   type="button"
@@ -91,8 +91,8 @@ export function FAQ() {
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 select-none focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base sm:text-lg font-bold tracking-tight text-[#121316] font-sans">
-                    <span className="text-xs text-[#888C99] mr-3 font-mono">
+                  <span className="text-base sm:text-lg font-bold tracking-tight text-[#111111] font-sans">
+                    <span className="text-xs text-[#777777] mr-3 font-mono">
                       {idx < 9 ? `0${idx + 1}` : idx + 1}
                     </span>
                     {faq.q}
@@ -101,8 +101,8 @@ export function FAQ() {
                   <div
                     className={`w-7 h-7 flex-shrink-0 rounded-lg flex items-center justify-center border transition-colors ${
                       isOpen
-                        ? "bg-[#20C8E8] border-[#20C8E8] text-[#121316]"
-                        : "bg-[#F4EFE6] border-black/10 text-[#575A65]"
+                        ? "bg-[#111111] border-[#111111] text-[#F7F4EC]"
+                        : "bg-[#F7F4EC] border-[#D8D5CC] text-[#555555]"
                     }`}
                   >
                     {isOpen ? (
@@ -114,7 +114,7 @@ export function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#575A65] font-sans leading-relaxed border-t border-black/[0.06]">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm sm:text-base text-[#555555] font-sans leading-relaxed border-t border-[#EBE7DC]">
                     {faq.a}
                   </div>
                 )}
@@ -124,15 +124,15 @@ export function FAQ() {
         </div>
 
         {/* Direct WhatsApp Strip */}
-        <div className="mt-12 p-6 rounded-2xl bg-white border border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_16px_rgba(0,0,0,0.03)]">
-          <div className="text-xs sm:text-sm font-mono text-[#575A65]">
+        <div className="mt-12 p-6 rounded-2xl bg-white border border-[#D8D5CC] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_4px_16px_rgba(17,17,17,0.02)]">
+          <div className="text-xs sm:text-sm font-mono text-[#555555]">
             Have a question specific to your software stack or industry?
           </div>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-[#121316] hover:text-[#FF4B2B] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase text-[#111111] hover:text-[#FF542F] transition-colors"
           >
             <span>Ask Stavan directly on WhatsApp</span>
             <span>→</span>

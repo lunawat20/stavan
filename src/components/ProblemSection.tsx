@@ -9,8 +9,8 @@ export function ProblemSection() {
       subtitle: "HOURS CONSUMED",
       description:
         "Repetitive tasks consume hours that could be spent growing the business.",
-      icon: <Clock className="w-5 h-5 text-[#FF4B2B]" />,
-      accent: "#FF4B2B",
+      icon: <Clock className="w-5 h-5 text-[#FF542F]" />,
+      accent: "#FF542F",
       tag: "TIME DRAIN",
     },
     {
@@ -29,8 +29,8 @@ export function ProblemSection() {
       subtitle: "DROPPED LEADS",
       description:
         "Leads, enquiries and follow-ups can slip through the cracks without immediate response.",
-      icon: <AlertTriangle className="w-5 h-5 text-[#FFD43B]" />,
-      accent: "#FFD43B",
+      icon: <AlertTriangle className="w-5 h-5 text-[#FFD447]" />,
+      accent: "#FFD447",
       tag: "LEAKAGE",
     },
     {
@@ -39,8 +39,8 @@ export function ProblemSection() {
       subtitle: "DISCONNECTED SILOS",
       description:
         "Information lives across WhatsApp, email, spreadsheets, CRM systems and more.",
-      icon: <Layers className="w-5 h-5 text-[#FF4C9A]" />,
-      accent: "#FF4C9A",
+      icon: <Layers className="w-5 h-5 text-[#FF4D96]" />,
+      accent: "#FF4D96",
       tag: "FRAGMENTATION",
     },
   ];
@@ -48,37 +48,37 @@ export function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative py-28 sm:py-36 bg-warm-canvas bg-system-map-light text-[#121316] border-b border-black/[0.08]"
+      className="relative py-28 sm:py-36 bg-soft-white bg-workflow-light text-[#111111] border-b border-[#D8D5CC]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Asymmetrical Editorial 2-Column Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Editorial Sticky Anchor */}
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-black/10 rounded-full text-xs font-mono tracking-widest text-[#575A65]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B2B]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FFFFFF] border border-[#D8D5CC] rounded-full text-xs font-mono tracking-widest text-[#555555]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF542F]" />
               <span>THE REAL PROBLEM</span>
             </div>
 
             <h2
-              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#121316] leading-[1.08]"
+              className="text-3xl sm:text-5xl font-bold tracking-tight text-[#111111] leading-[1.08]"
               style={{ letterSpacing: "-0.03em" }}
             >
               Your business has problems.
               <br />
-              <span className="text-[#FF4B2B]">We find the ones AI can solve.</span>
+              <span className="text-[#FF542F]">We find the ones AI can solve.</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#575A65] font-sans leading-relaxed">
+            <p className="text-base sm:text-lg text-[#555555] font-sans leading-relaxed">
               Too much of your team&apos;s time disappears into repetitive work,
               manual processes and disconnected tools.
             </p>
 
-            <div className="pt-4 border-t border-black/[0.08] hidden lg:block">
-              <div className="text-xs font-mono text-[#888C99] uppercase tracking-wider mb-2">
+            <div className="pt-4 border-t border-[#D8D5CC] hidden lg:block">
+              <div className="text-xs font-mono text-[#777777] uppercase tracking-wider mb-2">
                 DIAGNOSTIC FRAMEWORK
               </div>
-              <p className="text-xs text-[#575A65] leading-relaxed">
+              <p className="text-xs text-[#555555] leading-relaxed">
                 We review workflows across customer acquisition, operations, and
                 back-office administration to pinpoint where manual drag can be
                 eliminated.
@@ -87,11 +87,11 @@ export function ProblemSection() {
           </div>
 
           {/* Right Column: Refined Asymmetrical Cards Stack */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="lg:col-span-7 space-y-4">
             {problems.map((p) => (
               <div
                 key={p.num}
-                className="studio-card-light rounded-2xl p-6 sm:p-7 relative overflow-hidden group"
+                className="card-studio-light rounded-2xl p-6 sm:p-7 relative overflow-hidden group"
               >
                 {/* Thin colored vertical indicator on the left spine */}
                 <div
@@ -102,10 +102,10 @@ export function ProblemSection() {
                 <div className="pl-3 sm:pl-4">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-sm font-bold text-[#888C99]">
+                      <span className="font-mono text-sm font-bold text-[#777777]">
                         {p.num} //
                       </span>
-                      <span className="text-[11px] font-mono tracking-wider text-[#575A65] uppercase">
+                      <span className="text-[11px] font-mono tracking-wider text-[#555555] uppercase">
                         {p.subtitle}
                       </span>
                     </div>
@@ -121,20 +121,20 @@ export function ProblemSection() {
                     </div>
                   </div>
 
-                  <h3 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-[#121316] mb-2">
+                  <h3 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-[#111111] mb-2">
                     {p.title}
                   </h3>
 
-                  <p className="text-sm text-[#575A65] font-sans leading-relaxed">
+                  <p className="text-sm text-[#555555] font-sans leading-relaxed">
                     {p.description}
                   </p>
 
-                  <div className="mt-4 pt-3 border-t border-black/[0.06] flex items-center justify-between text-[11px] font-mono text-[#888C99]">
+                  <div className="mt-4 pt-3 border-t border-[#EBE7DC] flex items-center justify-between text-[11px] font-mono text-[#777777]">
                     <span className="uppercase tracking-wider font-semibold">
                       FRICTION PATTERN: {p.tag}
                     </span>
-                    <span className="flex items-center gap-1 group-hover:text-[#121316] transition-colors">
-                      AUTOMATABLE <ArrowRight className="w-3 h-3 text-[#FF4B2B]" />
+                    <span className="flex items-center gap-1 group-hover:text-[#111111] transition-colors">
+                      AUTOMATABLE <ArrowRight className="w-3 h-3 text-[#FF542F]" />
                     </span>
                   </div>
                 </div>

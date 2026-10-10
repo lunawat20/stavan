@@ -18,7 +18,7 @@ export function WhatsAppButton() {
         rel="noopener noreferrer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="flex items-center gap-2.5 px-4 py-3 bg-[#14161C] text-[#F7F6F2] border border-white/15 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-[#25D366]/50 hover:bg-[#1A1D25] hover:-translate-y-0.5 transition-all select-none"
+        className="flex items-center gap-2.5 px-4 py-3 bg-[#111111] text-[#F7F4EC] border border-[#333333] rounded-full shadow-[0_10px_30px_rgba(17,17,17,0.2)] hover:border-[#25D366] hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition-all select-none"
         aria-label="Chat with Stavan on WhatsApp"
       >
         {/* Pulsing online status indicator */}
